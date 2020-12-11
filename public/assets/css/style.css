@@ -613,6 +613,9 @@ Main Banner Area CSS
 	background-size: cover;
     position: relative;
 	background-repeat: no-repeat;
+	max-width:100%;
+	display: block;
+}
 }
 .main-banner::before {
     content: '';
