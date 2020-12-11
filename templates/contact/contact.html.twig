@@ -1,0 +1,114 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}RED - Nous contacter{% endblock %}
+
+{% block content %}
+    <!-- Start Page Title Area -->
+    <div class="page-title">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <h3>Contact Us</h3>
+                            <ul>
+                                <li><a href="{{ path ('homepage') }}">Accueil</a></li>
+                                <li>/</li>
+                                <li>Nous contacter</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Title Area -->
+
+    <!-- Start Contact Area -->
+    <section class="contact-area contact-style-two ptb-80">
+        <div class="container">
+            {% for message in app.flashes ('notice') %}
+                <div class="alert alert-info">{{ message }}</div>
+            {% endfor %}
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="contactBox">
+                                <p><i class="fa fa-map-marker"></i> Paris, Saint-Etienne, Lyon, France</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="contactBox">
+                                <p><i class="fa fa-phone"></i> <a href="#">+33 321 254-5874</a></p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="contactBox">
+                                <p><i class="fa fa-envelope"></i> <a href="#">info@red.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="contactBox">
+                                <p><i class="fa fa-globe"></i> <a href="#">www.red.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="contact-form">
+                        {{ form_start(form) }}
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        {{ form_row(form.name) }}
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        {{ form_row(form.email) }}
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        {{ form_row(form.phone) }}
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        {{ form_row(form.subject) }}
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <div class="form-group">
+                                        {{ form_row(form.message) }}
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                       {{ form_end(form) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact Area -->
+{% endblock %}

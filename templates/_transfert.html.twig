@@ -1,0 +1,63 @@
+<!-- Start Contact Area -->
+<section class="contact-area contact-style-two ptb-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <lable for="cname">Nom</lable>
+                                    <input type="text" class="form-control" value="{{ app.user.firstname }}" disabled>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <lable for="cname">Prénoms</lable>
+                                    <input type="text" class="form-control" value="{{ app.user.lastname }}" disabled>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <lable for="cname">Email</lable>
+                                    <input type="text" class="form-control" value="{{ app.user.email }}" disabled>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <textarea name="message" class="form-control" value="{{ app.user.description }}" disabled></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="mt-3">
+                                    <a href="{{ path('account_profile') }}" class="btn btn-primary mr-2 mb-2">
+                                        modifier vos informations
+                                    </a>
+                                    <a href="{{ path('account_password') }}" class="btn btn-primary mr-2 mb-2">
+                                        changer de mot de passe
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Contact Area -->

@@ -1,0 +1,91 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ member.firstname }} {% endblock %}
+
+{% block content %}
+
+    <!-- Start Page Title Area -->
+    <div class="page-title">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <h3>{{ member.firstname }}</h3>
+                            <ul>
+                                <li><a href="{{ path ('homepage') }}">Accueil</a></li>
+                                <li>/</li>
+                                <li>{{ member.firstname }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Title Area -->
+
+    <!-- Start Attorneys Details Area-->
+    <section class="attorneys-details-area ptb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-12">
+                    <div class="attorney-details">
+                        <h5>{{ member.fonction }}</h5>
+                        <h3>{{ member.firstname }} {{ member.lastname }}</h3>
+
+                        <p>{{ member.presentation |raw }}</p>
+
+                        <ul class="attorney-social">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-12">
+                    <div class="attorney-image">
+                        <img src="/uploads/{{ member.illustration }}" alt="{{ member.firstname }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Attorneys Details Area-->
+
+    <!-- Start Attorneys Experience Area -->
+    <section class="attorneys-info-area ptb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="attorney-desc">
+                        <h3 class="title">Experience</h3>
+                        <p>{{ member.experience |raw }}</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+                    <div class="education-certification-admission">
+                        <h3 class="title">Education, Certification</h3>
+                        <p>{{ member.education |raw }}</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- End Attorneys Experience Area -->
+
+
+    <!-- End Case Result Area -->
+
+
+    <!-- End Attorneys Area -->
+
+{% endblock %}
