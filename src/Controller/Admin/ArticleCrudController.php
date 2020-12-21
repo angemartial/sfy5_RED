@@ -31,15 +31,15 @@ class ArticleCrudController extends AbstractCrudController
     {
        return [
            TextField::new('title'),
-//           SlugField::new('slug')->setTargetFieldName('title'),
-
+           SlugField::new('slug')->setTargetFieldName('title'),
+           AssociationField::new('user','Auteur')->hideOnForm(),
            TextEditorField::new('introduction','Introduction'),
            TextEditorField::new('content'),
            AssociationField::new('category'),
            AssociationField::new('subcategory'),
            AssociationField::new('subcategory1'),
            ImageField::new('illustration')
-               ->setBasePath('uploads/')
+               ->setBasePath('/uploads')
                ->setUploadDir('public/uploads')
                ->setUploadedFileNamePattern('[randomhash].[extension]')
                ->setRequired('false'),
