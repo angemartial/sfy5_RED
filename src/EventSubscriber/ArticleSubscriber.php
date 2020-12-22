@@ -17,9 +17,11 @@ use Symfony\Component\Security\Core\Security;
 class ArticleSubscriber implements EventSubscriberInterface
 {
 
+    private $security;
+
    public function __construct(Security $security)
    {
-       $this->Security = $security;
+       $this->security = $security;
    }
 
     public static function getSubscribedEvents()
@@ -33,7 +35,7 @@ class ArticleSubscriber implements EventSubscriberInterface
    {
        $entity = $event->getEntityInstance();
        if($entity instanceof Article){
-           $entity->setUser($this->Security->getUser());
+           $entity->setUser($this->security->getUser());
        }
    }
 }

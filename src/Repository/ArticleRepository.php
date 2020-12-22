@@ -6,7 +6,8 @@ use App\Entity\Article;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use App\Classe\Search;
-
+use DateTime;
+use Doctrine\Common\Collections\Criteria;
 
 /**
  * @method Article|null find($id, $lockMode = null, $lockVersion = null)
@@ -19,6 +20,16 @@ class ArticleRepository extends ServiceEntityRepository
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Article::class);
+    }
+
+    public function findPublishedBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+    {
+        $criteriaObject = new Criteria(null, $orderBy, $offset, $limit);
+        $criteriaObject->where($criteriaObject->expr()->lte('publishedAt', new \DateTime()));
+        foreach ($criteria as $criterion => $value) {
+            $criteriaObject->andWhere($criteriaObject->expr()->eq($criterion, $value));
+        }
+        return $this->matching($criteriaObject);
     }
 
     /**

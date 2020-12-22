@@ -118,7 +118,7 @@
                                     <a href="{{ url }}"><i class="fa fa-link"></i></a>
                                 </div>
                                 <div class="date">
-                                    <span>15 Jan<br>2018</span>
+                                    <span>{{ actuality.publishedAt|date('d M Y') }} </span>
                                 </div>
                             </div>
                             <div class="post-content">
@@ -153,6 +153,7 @@
 
 {% for articles in articlesArticles %}
             <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+            
                 <div class="practice-box">
                     <div class="thumb">
                         <img src="uploads/{{ articles.illustration }}" alt="practice-img">
@@ -161,8 +162,11 @@
                         </div>
                     </div>
                     <div class="practice-text">
-                        <h3><a href="{{ path ('article_show', {'slug': articles.slug}) }}">{{ articles.title }}</a></h3>
-                        <p>{{ articles.introduction }}</p>
+                        <h3><a href="{{ path ('article_show', {'slug': articles.slug}) }}">{{ articles.title|striptags }}</a></h3>
+                        <p>{{ articles.introduction|striptags|raw|length > 100 ? articles.introduction|striptags|slice(0, 100)|raw  : articles.introduction|striptags|raw }}
+                        {% if articles.introduction|striptags|raw|length > 100 %}...{% endif %}
+                        </p>
+                        {{ articles.introduction|striptags|raw|length }}
                     </div>
                 </div>
             </div>

@@ -13,4 +13,6 @@ return [
     Twig\Extra\TwigExtraBundle\TwigExtraBundle::class => ['all' => true],
     EasyCorp\Bundle\EasyAdminBundle\EasyAdminBundle::class => ['all' => true],
     Symfony\Bundle\MakerBundle\MakerBundle::class => ['dev' => true],
+    FOS\CKEditorBundle\FOSCKEditorBundle::class => ['all' => true],
+    CKSource\Bundle\CKFinderBundle\CKSourceCKFinderBundle::class => ['all' => true],
 ];

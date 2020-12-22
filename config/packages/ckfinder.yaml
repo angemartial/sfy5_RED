@@ -1,0 +1,9 @@
+ckfinder:
+    connector:
+        tempDirectory:   '%kernel.project_dir%/public/userfiles/.ckfinder/temp'
+        authenticationClass: App\CustomCKFinderAuth\CustomCKFinderAuth
+        defaultResourceTypes: 'Files,Images'
+        resourceTypes:
+            Files:
+                name: Files
+                backend: default

@@ -36,7 +36,7 @@ class ArticleController extends AbstractController
         }else{
             $articlesCategory = $this->entityManager->getRepository(Category::class)->findOneBy(["name" => "Article"]);
             $articlesArticles = $this->entityManager->getRepository(Article::class)
-                ->findBy(["category"=> $articlesCategory], ["id" => "Desc"], 6, 0);
+                ->findPublishedBy(["category"=> $articlesCategory], ["id" => "Desc"], 6, 0);
 
         }
 

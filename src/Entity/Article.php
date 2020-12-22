@@ -41,7 +41,7 @@ class Article
     private $slug;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $illustration;
 
@@ -73,6 +73,11 @@ class Article
      */
     private $user;
 
+    public function __construct()
+    {
+        $this->publishedAt = new \DateTime();
+    }
+
 
     /**
      * hasLifecycleCallbaks action
@@ -81,12 +86,12 @@ class Article
      * @ORM\PreUpdate
      *
      */
-    public function prePersist()
+/*     public function prePersist()
     {
         if (empty($this->publishedAt)) {
             $this->publishedAt = new \DateTime();
         }
-    }
+    } */
 
 
 
