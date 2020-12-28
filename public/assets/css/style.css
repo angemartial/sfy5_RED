@@ -153,7 +153,7 @@ span.rating i {
 	margin: 0;
 	color: #333333;
 }
-}
+
 img {
     max-width: 100%;
 }
@@ -271,7 +271,7 @@ select.form-control:not([size]):not([multiple]) {
 	left: 10px;
 }
 .section-title h3 {
-	font-size: 18px;
+	font-size: 12px;
 	color: #777777;
     text-transform: capitalize;
 }
@@ -616,7 +616,7 @@ Main Banner Area CSS
 	max-width:100%;
 	display: block;
 }
-}
+
 .main-banner::before {
     content: '';
     position: absolute;
@@ -625,15 +625,20 @@ Main Banner Area CSS
     left: 0;
     top: 0;
     background: #000;
-    opacity: .66;
+	opacity: .66;
+	display: block;
 }
 .item-bg-one {
     background-image: url(../../assets/img/home-bg-1.jpg);
 }
 
 .main-banner h3 {
-	color: #e4353a;
+	color:white;
 	font-size: 20px;
+}
+.slideshow-content-cell{
+	vertical-align: top !important;
+	padding-top: 3rem;
 }
 .main-banner h2 {
 	color: #e4353a;
@@ -642,7 +647,7 @@ Main Banner Area CSS
 	font-weight: 600;
 }
 .main-banner p {
-	color: #fff; !important;
+	color: #fff !important;
 	font-size: 15px;
 	max-width: 576px;
 	margin-bottom: 45px;
@@ -865,6 +870,7 @@ Practice Area CSS
 .practice-box .thumb {
 	overflow: hidden;
 	position: relative;
+	height: 200px;
 }
 .practice-box .thumb::before {
 	content: '';
@@ -924,11 +930,22 @@ Practice Area CSS
     -moz-transition: .4s;
     transition: .4s;
 }
+.practice-box .thumb img {
+    display: block;
+    width: 100%;
+    position: absolute;
+    height: auto;
+    max-width: initial;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 .practice-box:hover .thumb img {
     transform: scale(1.3);
 }
 .practice-text {
 	padding: 35px 20px 20px;
+	height: 300px;
 }
 .practice-text h3 a {
     font-size: 19px;
@@ -1315,6 +1332,18 @@ Advertise Area CSS
 Blog Area CSS
 =========================================
 */
+
+.owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+    position: absolute;
+    height: auto;
+    max-width: initial;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .blog-area {
     padding-bottom: 40px;
 }
@@ -1331,9 +1360,11 @@ Blog Area CSS
     box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.1);
 }
 .single-blog-post .thumb {
-	position: relative;
-	overflow: hidden;
+    position: relative;
+    overflow: hidden;
+    height: 200px;
 }
+	
 .single-blog-post .thumb::before {
 	content: '';
 	position: absolute;
@@ -1347,7 +1378,8 @@ Blog Area CSS
     -o-transition: .4s;
     -webkit-transition: .4s;
     -moz-transition: .4s;
-    transition: .4s;
+	transition: .4s;
+	z-index: 1;
 }
 .single-blog-post:hover .thumb::before {
 	opacity: .66;
@@ -1365,7 +1397,8 @@ Blog Area CSS
     -o-transition: .4s;
     -webkit-transition: .4s;
     -moz-transition: .4s;
-    transition: .4s;
+	transition: .4s;
+	z-index: 2;
 }
 .single-blog-post:hover .blog-link {
 	transform: scale(1);
@@ -1396,6 +1429,7 @@ Blog Area CSS
 	border: 1px solid #eee;
 	border-top: none;
 	padding: 25px;
+	height: 300px;
 }
 .single-blog-post .post-content h3 a {
 	font-size: 18px;
@@ -3139,6 +3173,10 @@ Shop Details Area CSS
 Cart Area CSS
 =========================================
 */
+
+.category-page-title ~ section:nth-child(even) {
+	background-color: #f2f2f2;
+}
 table {
 	border-collapse: separate;
 }
@@ -3802,7 +3840,7 @@ Footer Area CSS
 }
 .footer-area .widgets .latest-tweets-post .content a {
 	display: inline-block;
-	font-size: ;
+
 	color: #1da1f2;
 }
 .footer-area .widgets .latest-tweets-post .content span {

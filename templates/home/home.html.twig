@@ -8,14 +8,13 @@
         {% for slider in sliderArticles %}
         <div class="main-banner" style=" background-size: cover; background-image: url('uploads/{{ slider.illustration }}');">
             <div class="d-table" >
-                <div class="d-table-cell ">
+                <div class="d-table-cell slideshow-content-cell ">
                     <div class="container" >
                         <div class="row">
-
                             <div class="col-lg-12 col-md-12 slide">
-                                <h3><span>{{ slider.title }}
-                                    </span></h3>
-                                <p>{{ slider.introduction|raw }}</p>
+                                <h3>{{ slider.category.name }}</h3>
+                                <h2><span>{{ slider.title|striptags|raw|u.truncate(22,'...', false)|raw }}</span></h2>
+                                <p>{{ slider.introduction|striptags|u.truncate(255,'...', false)|raw }}</p>
                                 <a href="{{ path ('article_show', {'slug': slider.slug}) }}" class="btn btn-primary">Lire +</a>
                             </div>
                         </div>
@@ -123,11 +122,11 @@
                             </div>
                             <div class="post-content">
                                 <h3><a href="{{ url }}">{{ actuality.title }}</a></h3>
-                                <p>{{ actuality.introduction | raw}}</p>
+                                <p>{{ actuality.introduction|striptags|u.truncate(100,'...', false)|raw}}</p>
                             </div>
                             <div class="post-meta">
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-user"></i> Admin</a></li>
+                                    <li><a href="#"><i class="fa fa-user"></i> {{ actuality.user.firstname|u.title(true) }}</a></li>
                                     {#<li><a href="#"><i class="fa fa-heart-o"></i> 301</a></li>#}
                                     {#<li><a href="#"><i class="fa fa-comments-o"></i> 31</a></li>#}
                                 </ul>
@@ -156,17 +155,14 @@
             
                 <div class="practice-box">
                     <div class="thumb">
-                        <img src="uploads/{{ articles.illustration }}" alt="practice-img">
+                        <img src="/uploads/{{ articles.illustration }}" alt="practice-img">
                         <div class="practice-link">
                             <a href="{{ path ('article_show', {'slug': articles.slug}) }}"><i class="fa fa-link"></i></a>
                         </div>
                     </div>
                     <div class="practice-text">
                         <h3><a href="{{ path ('article_show', {'slug': articles.slug}) }}">{{ articles.title|striptags }}</a></h3>
-                        <p>{{ articles.introduction|striptags|raw|length > 100 ? articles.introduction|striptags|slice(0, 100)|raw  : articles.introduction|striptags|raw }}
-                        {% if articles.introduction|striptags|raw|length > 100 %}...{% endif %}
-                        </p>
-                        {{ articles.introduction|striptags|raw|length }}
+                        <p>{{ articles.introduction|striptags|u.truncate(100,'...', false)|raw }}</p>
                     </div>
                 </div>
             </div>

@@ -150,6 +150,9 @@
     "ocramius/proxy-manager": {
         "version": "2.10.0"
     },
+    "php": {
+        "version": "7.4"
+    },
     "phpdocumentor/reflection-common": {
         "version": "2.2.0"
     },
@@ -584,6 +587,9 @@
         "version": "v5.1.8"
     },
     "twig/extra-bundle": {
+        "version": "v3.1.1"
+    },
+    "twig/string-extra": {
         "version": "v3.1.1"
     },
     "twig/twig": {

@@ -2,10 +2,14 @@
 
 namespace App\Controller;
 
+use App\Classe\Search;
 use App\Entity\Article;
 use App\Entity\Category;
+use App\Repository\ArticleRepository;
+use App\Repository\CategoryRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -17,6 +21,60 @@ class HomeController extends AbstractController
     {
         $this->entityManager = $entityManager;
     }
+
+    /**
+     * @Route("/resultat-de-recherche", name="home.search_result")
+     * @param Request $request
+     * @param ArticleRepository $articleRepository
+     */
+    public function search(Request $request, ArticleRepository $articleRepository)
+    {
+        $string = $request->query->get('string',  '');
+        $string = trim(strip_tags($string));
+        $categories = $request->query->get('categories', []);
+
+        $search = new Search();
+        $search->string = $string;
+        foreach ($categories as $category) {
+            $search->categories[] = trim(strip_tags($category));
+        }
+
+        $articles = $articleRepository->findWithSearch($search);
+
+        return $this->render('home/search.html.twig', ['articles' => $articles, 'search' => $search]);
+    }
+
+    /**
+     * @Route("/categorie/{slug}", name="home.category_page")
+     */
+    public function category($slug, CategoryRepository $repository, ArticleRepository $articleRepository){
+        $slug = trim(strip_tags($slug));
+        $category = $repository->findOneBy(['name' => $slug]);
+        if (null === $category) {
+            throw $this->createNotFoundException('Cette catégorie n\'existe pas dans notre systeme');
+        }
+
+        $articles = $articleRepository->findPublishedBy(['category' => $category], ["id" => "Desc"], 20, 0);
+        $subCategories = $category->getSubCategories();
+
+        $subCategoryContent = [];
+
+        foreach ($subCategories as $subCategory) {
+            $subCategoryContent[] = [
+                'subCategory' => $subCategory,
+                'articles' => $articleRepository->findPublishedBy(['category' => $subCategory], ["id" => "Desc"], 10, 0)
+            ];
+        }
+
+        return $this->render('home/category.html.twig', [
+                'subCategoryContent' => $subCategoryContent,
+                'category' => $category,
+                'articles' => $articles
+            ]
+        );
+
+    }
+
     /**
      * @Route("/", name="homepage")
      */

@@ -49,8 +49,7 @@ class ArticleCrudController extends AbstractCrudController
            //TextEditorField::new('introduction','Introduction')->setFormType(CKEditorType::class),
            //TextEditorField::new('content'),
            AssociationField::new('category'),
-           AssociationField::new('subcategory'),
-           AssociationField::new('subcategory1'),
+
            DateTimeField::new('publishedAt', 'Publier le'),
            ImageField::new('illustration')
                ->setBasePath('/uploads')

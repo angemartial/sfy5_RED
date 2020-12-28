@@ -3,7 +3,7 @@
 {% block title %}{{ article.title }}{% endblock %}
 
 {% block content %}
-
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v9.0" nonce="E8ArijzJ"></script>
     <!-- Start Page Title Area -->
     <div class="page-title">
         <div class="d-table">
@@ -24,7 +24,7 @@
         </div>
     </div>
     <!-- End Page Title Area -->
-
+    <div id="fb-root"></div>
     <!-- Start Blog Details Area -->
     <section class="blog-details-area ptb-80">
         <div class="container">
@@ -41,13 +41,13 @@
 
                         <div class="blog-details-content">
                             <ul>
-                                <li><a href="#"><i class="fa fa-user"></i> auteur</a></li>
+                                <li><a href="#"><i class="fa fa-user"></i> {{ article.user.name|title }}</a></li>
                                 <li><a href="#"><i class="fa fa-heart-o"></i> 301</a></li>
                                 <li><a href="#"><i class="fa fa-comments-o"></i> 31</a></li>
                                 <li><a href="#"><i class="fa fa-tag"></i> Divorce Case</a></li>
                             </ul>
                             <h3>{{ article.title }}</h3>
-                            <p><b><i>{{ article.introduction }}</i></b></p>
+                            <p><b><i>{{ article.introduction|raw }}</i></b></p>
 
                             <div class="text">
 
@@ -68,6 +68,7 @@
                                 </ul>
                             </div>
 
+
                             <div class="blog-share-social">
                                 <ul>
                                     <li class="title">As-tu aimé cette publication? Partager sur:</li>
@@ -78,6 +79,7 @@
                                     <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                 </ul>
                             </div>
+                            <div class="fb-comments" data-href="{{ app.request.uri }}" data-width="" data-numposts="5"></div>
 
                             {#<div class="post-prev-next-button">#}
                                 {#<div class="row">#}
@@ -178,7 +180,7 @@
                 </div>
 
                 <!-- blog widget -->
-                {#{% include '/partials/_blogWidget.html.twig' %}#}
+                {% include '/partials/_blogWidget.html.twig' %}
                 <!-- end blog widget -->
             </div>
         </div>

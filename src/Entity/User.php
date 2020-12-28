@@ -77,6 +77,11 @@ class User implements UserInterface
         $this->articles = new ArrayCollection();
     }
 
+    public function getName():string
+    {
+        return $this->getFirstname() . ' ' . $this->getLastname();
+    }
+
     
 
     public function getId(): ?int
