@@ -72,12 +72,14 @@
                                 </ul>
                             </li>
                             {% for category in categoriesInMenu  %}
-                                {% if category.parent is empty %}
+                                {% if category.parent is empty and category.showOnMenu %}
                                     <li><a href="{{ path ('home.category_page', {slug: category.name}) }}">{{ category.name|title }}</a>
                                     {% if category.subCategories|length > 0 %}
                                         <ul class="dropdown">
                                             {% for subCategory in category.subCategories %}
+                                                {% if subCategory.showOnMenu %}
                                                 <li><a href="{{ path ('home.category_page', {slug: subCategory.name}) }}">{{ subCategory.name }}</a></li>
+                                                {% endif %}
                                             {% endfor %}
                                         </ul>
                                     {% endif %}

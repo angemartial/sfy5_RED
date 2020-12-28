@@ -44,6 +44,11 @@ class Category
      */
     private $showAs = 'blog';
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $showOnMenu = false;
+
     public function __construct()
     {
         $this->articles = new ArrayCollection();
@@ -161,6 +166,18 @@ class Category
     public function setShowAs(?string $showAs): self
     {
         $this->showAs = $showAs;
+
+        return $this;
+    }
+
+    public function getShowOnMenu(): bool
+    {
+        return $this->showOnMenu;
+    }
+
+    public function setShowOnMenu(bool $showOnMenu): self
+    {
+        $this->showOnMenu = $showOnMenu;
 
         return $this;
     }

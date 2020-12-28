@@ -41,10 +41,10 @@
 
                         <div class="blog-details-content">
                             <ul>
-                                <li><a href="#"><i class="fa fa-user"></i> {{ article.user.name|title }}</a></li>
-                                <li><a href="#"><i class="fa fa-heart-o"></i> 301</a></li>
-                                <li><a href="#"><i class="fa fa-comments-o"></i> 31</a></li>
-                                <li><a href="#"><i class="fa fa-tag"></i> Divorce Case</a></li>
+                                <li title="Auteur"><a href="#"><i class="fa fa-user"></i> {{ article.user.name|title }}</a></li>
+                                <li title="Nombre de vues"><a href="#"><i class="fa fa-eye"></i> {{ article.views }}</a></li>
+{#                                <li><a href="#"><i class="fa fa-comments-o"></i> 31</a></li>#}
+{#                                <li><a href="#"><i class="fa fa-tag"></i> Divorce Case</a></li>#}
                             </ul>
                             <h3>{{ article.title }}</h3>
                             <p><b><i>{{ article.introduction|raw }}</i></b></p>
@@ -71,12 +71,10 @@
 
                             <div class="blog-share-social">
                                 <ul>
-                                    <li class="title">As-tu aimé cette publication? Partager sur:</li>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li>As-tu aimé cette publication? Partager sur:</li>
+                                    <li><a href="https://www.facebook.com/sharer.php?u={{ app.request.uri }}"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="https://twitter.com/intent/tweet?url={{ app.request.uri }}&text={{ article.title }}"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/sharing/share-offsite/?url={{ app.request.uri }}"><i class="fa fa-linkedin"></i></a></li>
                                 </ul>
                             </div>
                             <div class="fb-comments" data-href="{{ app.request.uri }}" data-width="" data-numposts="5"></div>

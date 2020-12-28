@@ -14,6 +14,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
  * @ORM\Table(name="`user`")
+ * @ORM\HasLifecycleCallbacks
  * @UniqueEntity(fields={"email"}, message="cette adresse mail
  * est déjà utilisé , merci de le modifier")
  */
@@ -40,7 +41,11 @@ class User implements UserInterface
     /**
      * @var string The hashed password
      * @ORM\Column(type="string")
-     * @Assert\Length(min=6, minMessage="votre mot de passe doit faire au moins 6 caractères")
+     * @Assert\Regex(
+     *     pattern="/(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/",
+     *     match=true,
+     *     message="Votre mot de passe doit: faire au moins 6 caractères, contenir au moins un caractère majuscule, au moins une minuscule et au moins un chiffre ou caractere spécial"
+     * )
      */
     private $password;
 
@@ -71,6 +76,11 @@ class User implements UserInterface
      * @ORM\OneToMany(targetEntity=Article::class, mappedBy="user")
      */
     private $articles;
+
+    /**
+     * @var string
+     */
+    private $userType = 'user';
 
     public function __construct()
     {
@@ -243,6 +253,39 @@ class User implements UserInterface
     public function __toString()
     {
         return $this->lastname;
+    }
+
+    /**
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+     */
+    private function updateRole()
+    {
+        if(in_array($this->userType, ['user', 'admin', 'super_admin'])  ){
+            $this->roles = ['ROLE_' . strtoupper($this->userType)];
+        }
+    }
+
+    /**
+     * @return string
+     */
+    public function getUserType(): string
+    {
+
+        if (count($this->roles)  > 0) {
+            $role = $this->roles[0];
+            $this->userType = strtolower(str_replace('ROLE_', '', $role)) ;
+            
+        }
+        return $this->userType;
+    }
+
+    /**
+     * @param string $userType
+     */
+    public function setUserType(string $userType): void
+    {
+        $this->userType = $userType;
     }
 
 

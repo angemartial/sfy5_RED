@@ -9,6 +9,7 @@ use App\Classe\Search;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ArticleController extends AbstractController
@@ -50,21 +51,30 @@ class ArticleController extends AbstractController
     /**
      * @Route("/articles/{slug}", name="article_show")
      */
-    public function show($slug)
+    public function show(Session $session, EntityManagerInterface  $manager, $slug)
     {
-        $search = new Search();
-        $form = $this->createForm(SearchType::class, $search);
-
-
+        /** @var Article $article */
         $article = $this->entityManager->getRepository(Article::class)->findOneBySlug($slug);
 
         if(!$article){
             return $this->redirectToRoute('articles_index');
         }
 
+        if(!$session->has('views')){
+            $session->set('views', []);
+        }
+        $views = $session->get('views');
+        if(!in_array($slug, $views)){
+            $views[] = $slug;
+            $article->incrementViews();
+            $manager->persist($article);
+            $manager->flush();
+            $session->set('views', $views);
+        }
+
+
         return $this->render('article/show.html.twig', [
             'article' => $article,
-            'form' => $form->createView()
         ]);
     }
 }
