@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 22 déc. 2020 à 00:01
+-- Généré le : lun. 04 jan. 2021 à 23:05
 -- Version du serveur :  10.4.14-MariaDB
 -- Version de PHP : 7.4.11
 
@@ -57,26 +57,26 @@ CREATE TABLE `article` (
   `introduction` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `content` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `illustration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `illustration` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `published_at` datetime NOT NULL,
   `subcategory1_id` int(11) DEFAULT NULL,
   `subcategory_id` int(11) DEFAULT NULL,
-  `user_id` int(11) NOT NULL
+  `user_id` int(11) NOT NULL,
+  `views` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `article`
 --
 
-INSERT INTO `article` (`id`, `category_id`, `title`, `introduction`, `content`, `slug`, `illustration`, `published_at`, `subcategory1_id`, `subcategory_id`, `user_id`) VALUES
-(3, 11, 'DU DROIT À LA SANTÉ EN CÔTE D’IVOIRE : ÉTAT DES LIEUX ET PERSPECTIVES D’AMÉLIORATION', '<div>Le mercredi 27 novembre 2019, un Conseil des Ministres s’est tenu, à la Préfecture de Katiola, sous la présidence du Chef de l’État, Son Excellence Monsieur Alassane OUATTARA.</div>', '<div>Repoussée au profit de la Commission Africaine des Droits de l’Homme et des Peuples (CMADHP), trente-sept ans plus tard, l’idée prend vie avec la signature le 9 juin 1998 à Ouagadougou et l’entrée en vigueur le 25 janvier 2004 du protocole relatif à la charte africaine des droits de l’Homme et des peuples portant création d’une Cour africaine des droits de l’homme et des peuples. Après une existence virtuelle de 2004-2006, la Cour voit réellement le jour après la désignation de son siège et l’élection de ses juges. D’après son préambule, la Cour a pour but de « compléter et renforcer la mission de la Commission Africaine des Droits de l’Homme et des Peuples ». En d’autres termes, « assurer la protection des droits de l’homme et des peuples, des libertés et devoirs en Afrique ». Ce protocole a été ratifié par trente 30 pays sur les 55 que composent l’Union Africaine, et prévoit en plus de la ratification, une déclaration de reconnaissance de compétence des États afin de permettre à leurs citoyens de saisir directement la Cour. Un tiers des États ratificateurs a eu à faire la déclaration de compétence soit 10 États sur trente. Continuer à lire …</div>', 'du-droit-a-la-sante-en-cote-divoire-etat-des-lieux-et-perspectives-damelioration', '6d2650c3e6aef847f5e1f58640707e41ffcb32bf.jpeg', '2020-11-22 21:01:55', NULL, NULL, 12),
-(4, 2, 'LES ENJEUX DE L’AIDE PUBLIQUE AU DÉVELOPPEMENT', 'Née dans le contexte de la guerre froide et de la décolonisation, l’Aide Publique au Développement (APD) fut un vecteur d’intérêts politiques et stratégiques avant de se transformer, depuis les années 1990, pour faire face aux défis de la mondialisation. Elle doit, à la fois, lutter contre la pauvreté et gérer les effets de l’intégration (économiques, sociaux, éthiques ou environnementaux) mondiale', 'Le milieu des années 1990 est, en effet, témoin d’un tournant des réflexions sur l’efficacité, le devenir, la recomposition des objectifs ainsi que les instruments et les transformations institutionnelles des pays bénéficiaires de l’aide. L’environnement international s’est profondément modifié avec la mondialisation, le développement des pays asiatiques, qui ont eu de moins en moins besoin de l’aide dont ils ont bénéficié jusqu’aux années 1960, et la marginalisation du continent africain malgré le volume et la longévité des flux reçus[2]. Continuer à lire …', 'les-enjeux-de-laide-publique-au-developpement', '2bb342b0a6f4bcf46bb61df56acacecce9946151.jpeg', '2020-11-22 21:01:57', NULL, NULL, 12),
-(5, 2, 'LA VICTIME DANS LA PROCÉDURE PÉNALE IVOIRIENNE', 'Haumond Nelly Assamoi, Doctorante en droit privé et sciences criminelles à l’Université de Limoges', 'Dans la plupart des groupes ethniques ivoiriens, traditionnellement lorsqu’il y a frictions entre deux individus, c’est l’ensemble de la communauté à laquelle ils appartiennent qui se trouve concernée. Est alors mise en place une procédure de règlement de conflit qui inclut toute la communauté. La victime lésée par le comportement prohibé ainsi que l’auteur de ce comportement se retrouvent devant les anciens et toute la communauté sous l’arbre à palabre[1] pour régler le conflit. La victime tient de ce fait une place à part entière et somme toute importante au cours de ces procédures. En effet, bien que la communauté participe à la gestion du conflit, la victime et l’auteur sont les principaux acteurs. La victime est celle qui a été offensée et une place de choix lui est accordée : c’est elle qui exerce les poursuites, personnellement ou par le biais de mandataires (famille et amis). L’auteur, également, se défend des accusations portées contre lui et est présent, mais accompagné de membres de sa famille ou d’amis pouvant se porter garants de sa bonne moralité. La sanction de l’auteur prend généralement la forme d’une réparation de la victime et de ses proches. Ainsi, on considère comme victime non pas seulement celle qui a souffert personnellement de la commission de l’infraction, mais toutes les personnes qui l’entourent à des degrés près.\r\n\r\nÀ la suite de la colonisation cette forme traditionnelle de règlement des conflits a laissé la place en Côte d’Ivoire à une justice étatique. Désormais, consécutivement à la commission d’une infraction – crime, délit ou contravention – même si la justice traditionnelle demeure dans certaines communautés, c’est la procédure pénale étatique qui est mise en œuvre. Continuer à lire …', 'la-victime-dans-la-procedure-penale-ivoirienne', 'b9137b3b7b8608fe775f400a0b17bcbb11fb88c8.jpeg', '2020-11-22 21:01:45', NULL, NULL, 12),
-(6, 1, 'LE DROIT DU TRAVAIL IVOIRIEN À L’ÉPREUVE DE LA CRISE DU COVID-19', 'Konin Marc Assoumou, Doctorant en Droit privé à l’université Jean Monnet de Saint-Étienne', 'La crise sanitaire du Covid-19 et ses conséquences sur les activités économiques contraignent les États à adapter la régulation des rapports sociaux. Les mesures de distanciation sociale ainsi que les restrictions aux libertés individuelles qu’impose la lutte contre le virus rendent difficile l’exercice des activités économiques. Le droit comme outil de régulation des relations sociales, plus particulièrement le droit du travail, apparait ainsi comme l’une des réponses apportées par les États. Face à cette pandémie, seules des réponses adaptées permettront de surmonter les conséquences socio-économiques qui découleront de cette crise.\r\n\r\nAux préoccupations légitimes des employeurs et des salariés, des réponses continuent à être apportées par l’élaboration de réponses normatives. En Côte d’Ivoire, les décrets pris en Conseil des ministres depuis le début de la crise sanitaire illustrent la prise en compte de la nécessité de mesures d’urgence[1]. Cependant, les mesures en vue d’assurer la sauvegarde des emplois tardent à faire leur incursion dans le paysage législatif ivoirien. Pour rappel, la législation ivoirienne du travail a été réformée par la loi du 20 juillet 2015, substituant ainsi la loi n° 95-15 du 12 janvier 1995. Continuer à lire …', 'le-droit-du-travail-ivoirien-a-lepreuve-de-la-crise-du-covid-19', '7415e6662f87d8ad8f2de43b86d6470b2f5fe03f.jpeg', '2020-11-22 21:01:22', NULL, NULL, 12),
-(7, 1, 'LES NOUVEAUX PRINCIPES DIRECTEURS DE LA PROCÉDURE PÉNALE IVOIRIENNE', 'Haumond Nelly ASSAMOI, Doctorante en droit privé et sciences criminelles à l’Université de Limoges', 'La procédure pénale est la procédure mise en œuvre à la suite de la commission d’une infraction. Elle est, de ce fait, « constituée de l’ensemble des règles relatives à la constatation des infractions, ainsi qu’à l’identification, l’appréhension, la poursuite et le jugement de leurs auteurs »[1]. Elle commence, alors, dès la constatation de l’infraction et se termine à l’exécution de la peine. Son but est d’établir la vérité judiciaire et, ainsi, déterminer la responsabilité pénale de l’auteur de l’infraction et la sanction qui doit lui être appliquée.\r\n\r\nCependant, pour qu’elle soit juste, comprise et fiable, la justice se doit d’être rendue dans le respect des droits de chaque partie qui y intervient. Et, en raison de son caractère répressif et de son impact sur les libertés individuelles, les droits internationaux et régionaux mettent en avant depuis plusieurs décennies diverses garanties qui doivent être respectées et appliquées tout au long de la procédure pénale. Ces garanties sont celles qui sont attendues de tout État de droit. Ce sont des garanties qui relèvent tant des institutions chargées de rendre la justice, telles que les exigences d’indépendance et d’impartialité, que des garanties procédurales telles que le droit à un délai raisonnable de la procédure, ou encore le principe du', 'les-nouveaux-principes-directeurs-de-la-procedure-penale-ivoirienne', 'e105a249d4adc707a9da364c032d4557fa46132d.jpeg', '2020-11-22 21:01:59', NULL, NULL, 12),
-(8, 11, 'DU DROIT À LA SANTÉ EN CÔTE D’IVOIRE : ÉTAT DES LIEUX ET PERSPECTIVES D’AMÉLIORATION', '<div>« <em>Existe-t-il pour l’homme un bien plus précieux que la Santé</em> ? », s’interrogeait un philosophe<a href=\"https://reseau-red.com/category/articles-juridiques/#_ftn1\">[1]</a> préfigurant l’importance accrue de la santé.</div>', '<div>Le droit à la santé est le défi le plus important et le plus complexe pour les États, influant sur leur économie, mais surtout sur la qualité de vie de leurs populations<a href=\"https://reseau-red.com/category/articles-juridiques/#_ftn2\">[2]</a>. La santé se définit comme « <em>un état de complet bien-être physique, mental et social, et qui ne consiste pas seulement en une absence de maladie ou d’infirmité »</em><a href=\"https://reseau-red.com/category/articles-juridiques/#_ftn3\">[3]</a> . Elle est considérée dans le Préambule de la Constitution de l’Organisation mondiale de la Santé comme un droit fondamental pour tout être humain. Plus encore la constitution ivoirienne de 2016 en son article 9 al. 2 promeut le « <em>droit à un accès aux services de santé </em>» à toute personne.<br><br></div><div>Partant, le droit à la santé comprend l’ensemble des règles relatives tant au « bien-être », à l’amélioration des conditions de vie des individus, qu’à la relation entre les professionnels de la santé et les patients. La crise actuelle du Covid19 a permis à tous les Etats d’évaluer leur système de santé, et peut-être, à espérer, penser une amélioration substantielle de celui-ci. Comptant parmi les pays africains à fort indice de développement, la situation du droit à la santé en Côte d’Ivoire, et surtout de l’accès aux soins de qualité demeure insatisfaisante et témoigne d’une bataille continue. De même, les textes régissant le droit à la santé en Côte d’Ivoire sont des textes hérités de la colonisation, tombés très vite en désuétude<a href=\"https://reseau-red.com/category/articles-juridiques/#_ftn4\">[4]</a>. Cette situation tend à rendre presque illusoire l’existence d’un véritable droit à la santé dans le pays, suivant l’état des lieux que l’on peut en dresser (I). Cependant, des perspectives d’amélioration tendent à assurer au droit à la santé une certaine réalité (II). <a href=\"https://reseau-red.com/2020/07/13/du-droit-a-la-sante-en-cote-divoire-etat-des-lieux-et-perspectives-damelioration/#more-635\">Continuer à lire …</a></div>', 'du-droit-a-la-sante-en-cote-divoire-etat-des-lieux-et-perspectives-damelioration', '1a3c66ad5dff146fa106d23a138cb5f46dc1591e.jpeg', '2020-11-22 21:01:50', NULL, NULL, 12),
-(9, 11, 'Collectivités territoriales ivoiriennes : vers une plus grande autonomie financière ?', '<div>Le mercredi 27 novembre 2019, un Conseil des Ministres s’est tenu, à la Préfecture de Katiola, sous la présidence du Chef de l’État, Son Excellence Monsieur Alassane OUATTARA.</div>', '<div>Parmi les projets de loi adoptés par le Conseil des Ministres, l’un a attiré particulièrement notre attention. Il s’agit du projet de loi portant régime financier des collectivités territoriales et des districts autonomes<a href=\"https://reseau-red.com/category/actualites/#_ftn1\">[1]</a>. C’est au titre du Ministère auprès du Premier Ministre, chargé du Budget et du Portefeuille de l’État, en liaison avec le Ministère de l’Administration du Territoire et de la Décentralisation et le Ministère de l’Economie et des Finances que le conseil a adopté ce projet de loi qui « <em>donnera la possibilité pour les Collectivités territoriales et les Districts autonomes, de créer, d’exploiter ou de faire exploiter des services publics à caractère industriel et commercial dont les conditions de fonctionnement sont similaires à celles des entreprises privées</em> »<a href=\"https://reseau-red.com/category/actualites/#_ftn2\">[2]</a>. <a href=\"https://reseau-red.com/2020/01/07/collectivites-territoriales-ivoiriennes-vers-une-plus-grande-autonomie-financiere/#more-518\">Continuer à lire …</a></div>', 'collectivites-territoriales-ivoiriennes-vers-une-plus-grande-autonomie-financiere', 'bb6d36dfe4827250e6c80850ffe65ed59187dda8.jpeg', '2020-12-09 21:18:16', NULL, 2, 12),
-(12, 11, 'Droit des affaires', '<div><a href=\"https://reseau-red.com/2020/05/18/le-retrait-de-la-declaration-dacceptation-de-la-competence-de-la-cour-africaine-des-droits-de-lhomme-et-des-peuples-par-letat-de-cote-divoire-regard-dun/\">Le retrait de la déclaration d’acceptation de la compétence de la Cour africaine des droits de l’homme et des peuples par l’État de Côte d’Ivoire : regard d’un privatiste<br></a><br></div>', '<div><a href=\"https://reseau-red.com/2020/05/18/le-retrait-de-la-declaration-dacceptation-de-la-competence-de-la-cour-africaine-des-droits-de-lhomme-et-des-peuples-par-letat-de-cote-divoire-regard-dun/\">Le retrait de la déclaration d’acceptation de la compétence de la Cour africaine des droits de l’homme et des peuples par l’État de Côte d’Ivoire : regard d’un privatiste<br>Le retrait de la déclaration d’acceptation de la compétence de la Cour africaine des droits de l’homme et des peuples par l’État de Côte d’Ivoire : regard d’un privatiste<br></a><br></div>', 'droit-des-affaires', '4c7116381e60c8bd3d1b61073e27c82040e8f979.jpeg', '2020-12-21 22:45:08', NULL, 1, 12);
+INSERT INTO `article` (`id`, `category_id`, `title`, `introduction`, `content`, `slug`, `illustration`, `published_at`, `subcategory1_id`, `subcategory_id`, `user_id`, `views`) VALUES
+(3, 11, 'DU DROIT À LA SANTÉ EN CÔTE D’IVOIRE : ÉTAT DES LIEUX ET PERSPECTIVES D’AMÉLIORATION', '<div>Le mercredi 27 novembre 2019, un Conseil des Ministres s’est tenu, à la Préfecture de Katiola, sous la présidence du Chef de l’État, Son Excellence Monsieur Alassane OUATTARA.</div>', '<div>Repoussée au profit de la Commission Africaine des Droits de l’Homme et des Peuples (CMADHP), trente-sept ans plus tard, l’idée prend vie avec la signature le 9 juin 1998 à Ouagadougou et l’entrée en vigueur le 25 janvier 2004 du protocole relatif à la charte africaine des droits de l’Homme et des peuples portant création d’une Cour africaine des droits de l’homme et des peuples. Après une existence virtuelle de 2004-2006, la Cour voit réellement le jour après la désignation de son siège et l’élection de ses juges. D’après son préambule, la Cour a pour but de « compléter et renforcer la mission de la Commission Africaine des Droits de l’Homme et des Peuples ». En d’autres termes, « assurer la protection des droits de l’homme et des peuples, des libertés et devoirs en Afrique ». Ce protocole a été ratifié par trente 30 pays sur les 55 que composent l’Union Africaine, et prévoit en plus de la ratification, une déclaration de reconnaissance de compétence des États afin de permettre à leurs citoyens de saisir directement la Cour. Un tiers des États ratificateurs a eu à faire la déclaration de compétence soit 10 États sur trente. Continuer à lire …</div>', 'du-droit-a-la-sante-en-cote-divoire-etat-des-lieux-et-perspectives-damelioration', '6d2650c3e6aef847f5e1f58640707e41ffcb32bf.jpeg', '2020-11-22 21:01:55', NULL, NULL, 12, NULL),
+(4, 2, 'LES ENJEUX DE L’AIDE PUBLIQUE AU DÉVELOPPEMENT', 'Née dans le contexte de la guerre froide et de la décolonisation, l’Aide Publique au Développement (APD) fut un vecteur d’intérêts politiques et stratégiques avant de se transformer, depuis les années 1990, pour faire face aux défis de la mondialisation. Elle doit, à la fois, lutter contre la pauvreté et gérer les effets de l’intégration (économiques, sociaux, éthiques ou environnementaux) mondiale', 'Le milieu des années 1990 est, en effet, témoin d’un tournant des réflexions sur l’efficacité, le devenir, la recomposition des objectifs ainsi que les instruments et les transformations institutionnelles des pays bénéficiaires de l’aide. L’environnement international s’est profondément modifié avec la mondialisation, le développement des pays asiatiques, qui ont eu de moins en moins besoin de l’aide dont ils ont bénéficié jusqu’aux années 1960, et la marginalisation du continent africain malgré le volume et la longévité des flux reçus[2]. Continuer à lire …', 'les-enjeux-de-laide-publique-au-developpement', '2bb342b0a6f4bcf46bb61df56acacecce9946151.jpeg', '2020-11-22 21:01:57', NULL, NULL, 12, NULL),
+(5, 2, 'LA VICTIME DANS LA PROCÉDURE PÉNALE IVOIRIENNE', 'Haumond Nelly Assamoi, Doctorante en droit privé et sciences criminelles à l’Université de Limoges', 'Dans la plupart des groupes ethniques ivoiriens, traditionnellement lorsqu’il y a frictions entre deux individus, c’est l’ensemble de la communauté à laquelle ils appartiennent qui se trouve concernée. Est alors mise en place une procédure de règlement de conflit qui inclut toute la communauté. La victime lésée par le comportement prohibé ainsi que l’auteur de ce comportement se retrouvent devant les anciens et toute la communauté sous l’arbre à palabre[1] pour régler le conflit. La victime tient de ce fait une place à part entière et somme toute importante au cours de ces procédures. En effet, bien que la communauté participe à la gestion du conflit, la victime et l’auteur sont les principaux acteurs. La victime est celle qui a été offensée et une place de choix lui est accordée : c’est elle qui exerce les poursuites, personnellement ou par le biais de mandataires (famille et amis). L’auteur, également, se défend des accusations portées contre lui et est présent, mais accompagné de membres de sa famille ou d’amis pouvant se porter garants de sa bonne moralité. La sanction de l’auteur prend généralement la forme d’une réparation de la victime et de ses proches. Ainsi, on considère comme victime non pas seulement celle qui a souffert personnellement de la commission de l’infraction, mais toutes les personnes qui l’entourent à des degrés près.\r\n\r\nÀ la suite de la colonisation cette forme traditionnelle de règlement des conflits a laissé la place en Côte d’Ivoire à une justice étatique. Désormais, consécutivement à la commission d’une infraction – crime, délit ou contravention – même si la justice traditionnelle demeure dans certaines communautés, c’est la procédure pénale étatique qui est mise en œuvre. Continuer à lire …', 'la-victime-dans-la-procedure-penale-ivoirienne', 'b9137b3b7b8608fe775f400a0b17bcbb11fb88c8.jpeg', '2020-11-22 21:01:45', NULL, NULL, 12, NULL),
+(6, 1, 'LE DROIT DU TRAVAIL IVOIRIEN À L’ÉPREUVE DE LA CRISE DU COVID-19', 'Konin Marc Assoumou, Doctorant en Droit privé à l’université Jean Monnet de Saint-Étienne', 'La crise sanitaire du Covid-19 et ses conséquences sur les activités économiques contraignent les États à adapter la régulation des rapports sociaux. Les mesures de distanciation sociale ainsi que les restrictions aux libertés individuelles qu’impose la lutte contre le virus rendent difficile l’exercice des activités économiques. Le droit comme outil de régulation des relations sociales, plus particulièrement le droit du travail, apparait ainsi comme l’une des réponses apportées par les États. Face à cette pandémie, seules des réponses adaptées permettront de surmonter les conséquences socio-économiques qui découleront de cette crise.\r\n\r\nAux préoccupations légitimes des employeurs et des salariés, des réponses continuent à être apportées par l’élaboration de réponses normatives. En Côte d’Ivoire, les décrets pris en Conseil des ministres depuis le début de la crise sanitaire illustrent la prise en compte de la nécessité de mesures d’urgence[1]. Cependant, les mesures en vue d’assurer la sauvegarde des emplois tardent à faire leur incursion dans le paysage législatif ivoirien. Pour rappel, la législation ivoirienne du travail a été réformée par la loi du 20 juillet 2015, substituant ainsi la loi n° 95-15 du 12 janvier 1995. Continuer à lire …', 'le-droit-du-travail-ivoirien-a-lepreuve-de-la-crise-du-covid-19', '7415e6662f87d8ad8f2de43b86d6470b2f5fe03f.jpeg', '2020-11-22 21:01:22', NULL, NULL, 12, NULL),
+(7, 1, 'LES NOUVEAUX PRINCIPES DIRECTEURS DE LA PROCÉDURE PÉNALE IVOIRIENNE', 'Haumond Nelly ASSAMOI, Doctorante en droit privé et sciences criminelles à l’Université de Limoges', 'La procédure pénale est la procédure mise en œuvre à la suite de la commission d’une infraction. Elle est, de ce fait, « constituée de l’ensemble des règles relatives à la constatation des infractions, ainsi qu’à l’identification, l’appréhension, la poursuite et le jugement de leurs auteurs »[1]. Elle commence, alors, dès la constatation de l’infraction et se termine à l’exécution de la peine. Son but est d’établir la vérité judiciaire et, ainsi, déterminer la responsabilité pénale de l’auteur de l’infraction et la sanction qui doit lui être appliquée.\r\n\r\nCependant, pour qu’elle soit juste, comprise et fiable, la justice se doit d’être rendue dans le respect des droits de chaque partie qui y intervient. Et, en raison de son caractère répressif et de son impact sur les libertés individuelles, les droits internationaux et régionaux mettent en avant depuis plusieurs décennies diverses garanties qui doivent être respectées et appliquées tout au long de la procédure pénale. Ces garanties sont celles qui sont attendues de tout État de droit. Ce sont des garanties qui relèvent tant des institutions chargées de rendre la justice, telles que les exigences d’indépendance et d’impartialité, que des garanties procédurales telles que le droit à un délai raisonnable de la procédure, ou encore le principe du', 'les-nouveaux-principes-directeurs-de-la-procedure-penale-ivoirienne', 'e105a249d4adc707a9da364c032d4557fa46132d.jpeg', '2020-11-22 21:01:59', NULL, NULL, 12, NULL),
+(8, 11, 'DU DROIT À LA SANTÉ EN CÔTE D’IVOIRE : ÉTAT DES LIEUX ET PERSPECTIVES D’AMÉLIORATION', '<div>« <em>Existe-t-il pour l’homme un bien plus précieux que la Santé</em> ? », s’interrogeait un philosophe<a href=\"https://reseau-red.com/category/articles-juridiques/#_ftn1\">[1]</a> préfigurant l’importance accrue de la santé.</div>', '<div>Le droit à la santé est le défi le plus important et le plus complexe pour les États, influant sur leur économie, mais surtout sur la qualité de vie de leurs populations<a href=\"https://reseau-red.com/category/articles-juridiques/#_ftn2\">[2]</a>. La santé se définit comme « <em>un état de complet bien-être physique, mental et social, et qui ne consiste pas seulement en une absence de maladie ou d’infirmité »</em><a href=\"https://reseau-red.com/category/articles-juridiques/#_ftn3\">[3]</a> . Elle est considérée dans le Préambule de la Constitution de l’Organisation mondiale de la Santé comme un droit fondamental pour tout être humain. Plus encore la constitution ivoirienne de 2016 en son article 9 al. 2 promeut le « <em>droit à un accès aux services de santé </em>» à toute personne.<br><br></div><div>Partant, le droit à la santé comprend l’ensemble des règles relatives tant au « bien-être », à l’amélioration des conditions de vie des individus, qu’à la relation entre les professionnels de la santé et les patients. La crise actuelle du Covid19 a permis à tous les Etats d’évaluer leur système de santé, et peut-être, à espérer, penser une amélioration substantielle de celui-ci. Comptant parmi les pays africains à fort indice de développement, la situation du droit à la santé en Côte d’Ivoire, et surtout de l’accès aux soins de qualité demeure insatisfaisante et témoigne d’une bataille continue. De même, les textes régissant le droit à la santé en Côte d’Ivoire sont des textes hérités de la colonisation, tombés très vite en désuétude<a href=\"https://reseau-red.com/category/articles-juridiques/#_ftn4\">[4]</a>. Cette situation tend à rendre presque illusoire l’existence d’un véritable droit à la santé dans le pays, suivant l’état des lieux que l’on peut en dresser (I). Cependant, des perspectives d’amélioration tendent à assurer au droit à la santé une certaine réalité (II). <a href=\"https://reseau-red.com/2020/07/13/du-droit-a-la-sante-en-cote-divoire-etat-des-lieux-et-perspectives-damelioration/#more-635\">Continuer à lire …</a></div>', 'du-droit-a-la-sante-en-cote-divoire-etat-des-lieux-et-perspectives-damelioration', '1a3c66ad5dff146fa106d23a138cb5f46dc1591e.jpeg', '2020-11-22 21:01:50', NULL, NULL, 12, NULL),
+(9, 11, 'Collectivités territoriales ivoiriennes : vers une plus grande autonomie financière ?', '<div>Le mercredi 27 novembre 2019, un Conseil des Ministres s’est tenu, à la Préfecture de Katiola, sous la présidence du Chef de l’État, Son Excellence Monsieur Alassane OUATTARA.</div>', '<div>Parmi les projets de loi adoptés par le Conseil des Ministres, l’un a attiré particulièrement notre attention. Il s’agit du projet de loi portant régime financier des collectivités territoriales et des districts autonomes<a href=\"https://reseau-red.com/category/actualites/#_ftn1\">[1]</a>. C’est au titre du Ministère auprès du Premier Ministre, chargé du Budget et du Portefeuille de l’État, en liaison avec le Ministère de l’Administration du Territoire et de la Décentralisation et le Ministère de l’Economie et des Finances que le conseil a adopté ce projet de loi qui « <em>donnera la possibilité pour les Collectivités territoriales et les Districts autonomes, de créer, d’exploiter ou de faire exploiter des services publics à caractère industriel et commercial dont les conditions de fonctionnement sont similaires à celles des entreprises privées</em> »<a href=\"https://reseau-red.com/category/actualites/#_ftn2\">[2]</a>. <a href=\"https://reseau-red.com/2020/01/07/collectivites-territoriales-ivoiriennes-vers-une-plus-grande-autonomie-financiere/#more-518\">Continuer à lire …</a></div>', 'collectivites-territoriales-ivoiriennes-vers-une-plus-grande-autonomie-financiere', 'bb6d36dfe4827250e6c80850ffe65ed59187dda8.jpeg', '2020-12-09 21:18:16', NULL, 2, 12, NULL);
 
 -- --------------------------------------------------------
 
@@ -86,19 +86,22 @@ INSERT INTO `article` (`id`, `category_id`, `title`, `introduction`, `content`, 
 
 CREATE TABLE `category` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `parent_id` int(11) DEFAULT NULL,
+  `show_as` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `show_on_menu` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `category`
 --
 
-INSERT INTO `category` (`id`, `name`) VALUES
-(1, 'Article'),
-(2, 'Economie'),
-(3, 'Base de données'),
-(4, 'Répères Méthologiques'),
-(11, 'Actualités');
+INSERT INTO `category` (`id`, `name`, `parent_id`, `show_as`, `show_on_menu`) VALUES
+(1, 'Article', NULL, '', 1),
+(2, 'Economie', NULL, '', 1),
+(3, 'Base de données', NULL, '', 1),
+(4, 'Répères Méthologiques', NULL, '', 1),
+(11, 'Actualités', NULL, '', 1);
 
 -- --------------------------------------------------------
 
@@ -181,6 +184,26 @@ INSERT INTO `members` (`id`, `fonction`, `firstname`, `lastname`, `presentation`
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `reset_password`
+--
+
+CREATE TABLE `reset_password` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `token` varchar(255) NOT NULL,
+  `created_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `reset_password`
+--
+
+INSERT INTO `reset_password` (`id`, `user_id`, `token`, `created_at`) VALUES
+(1, 14, '5ff3901de0950', '2021-01-04 23:01:01');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `slider`
 --
 
@@ -254,7 +277,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `email`, `roles`, `password`, `firstname`, `lastname`, `description`, `slug`) VALUES
-(12, 'angem@gmail.com', '[\"ROLE_ADMIN\"]', '$argon2id$v=19$m=65536,t=4,p=1$RFJkVXNwUHYweEtHcVZ4bg$lOHiaU4/tHLXFyRsLJaPphUU1gkKfCKs2MUOyqADchk', 'koffi Ange', 'Kouadio', 'parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous', NULL);
+(12, 'angem@gmail.com', '[\"ROLE_ADMIN\"]', '$argon2id$v=19$m=65536,t=4,p=1$RFJkVXNwUHYweEtHcVZ4bg$lOHiaU4/tHLXFyRsLJaPphUU1gkKfCKs2MUOyqADchk', 'koffi Ange', 'Kouadio', 'parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous parlez un peu de vous', NULL),
+(13, 'Brendaassamoi@gmail.com', '[]', 'NellyRed1', 'Brenda', 'Assamoi', NULL, NULL),
+(14, 'angemartialkoffi@gmail.com', '[]', '$argon2id$v=19$m=65536,t=4,p=1$THNSMVp1VWIuWi9OUlU2cg$N0egn2edR1revy6W6wOjJVws+x/p7c2hw1PzzlvLG9Y', 'koffi Ange', 'Kouadio', 'La procédure pénale est la procédure mise en œuvre à la suite de la commission d’une infraction. Elle est, de ce fait, « constituée de l’ensemble des règles relatives à la constatation des infractions, ainsi qu’à l’identification, l’appréhension, la poursuite et le jugement', NULL);
 
 --
 -- Index pour les tables déchargées
@@ -280,7 +305,8 @@ ALTER TABLE `article`
 -- Index pour la table `category`
 --
 ALTER TABLE `category`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `IDX_64C19C1727ACA70` (`parent_id`);
 
 --
 -- Index pour la table `contact`
@@ -299,6 +325,13 @@ ALTER TABLE `doctrine_migration_versions`
 --
 ALTER TABLE `members`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `reset_password`
+--
+ALTER TABLE `reset_password`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `IDX_B9983CE5A76ED395` (`user_id`);
 
 --
 -- Index pour la table `slider`
@@ -366,6 +399,12 @@ ALTER TABLE `members`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT pour la table `reset_password`
+--
+ALTER TABLE `reset_password`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT pour la table `slider`
 --
 ALTER TABLE `slider`
@@ -393,7 +432,7 @@ ALTER TABLE `tag`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Contraintes pour les tables déchargées
@@ -407,6 +446,18 @@ ALTER TABLE `article`
   ADD CONSTRAINT `FK_23A0E66233E2F3A` FOREIGN KEY (`subcategory1_id`) REFERENCES `subcategory1` (`id`),
   ADD CONSTRAINT `FK_23A0E665DC6FE57` FOREIGN KEY (`subcategory_id`) REFERENCES `subcategory` (`id`),
   ADD CONSTRAINT `FK_23A0E66A76ED395` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
+
+--
+-- Contraintes pour la table `category`
+--
+ALTER TABLE `category`
+  ADD CONSTRAINT `FK_64C19C1727ACA70` FOREIGN KEY (`parent_id`) REFERENCES `category` (`id`);
+
+--
+-- Contraintes pour la table `reset_password`
+--
+ALTER TABLE `reset_password`
+  ADD CONSTRAINT `FK_B9983CE5A76ED395` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
