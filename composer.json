@@ -13,6 +13,7 @@
         "doctrine/orm": "^2.7",
         "easycorp/easyadmin-bundle": "^3.1",
         "friendsofsymfony/ckeditor-bundle": "^2.2",
+        "mailjet/mailjet-apiv3-php": "^1.5",
         "phpdocumentor/reflection-docblock": "^5.2",
         "sensio/framework-extra-bundle": "^5.1",
         "symfony/apache-pack": "^1.0",

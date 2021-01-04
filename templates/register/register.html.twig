@@ -4,6 +4,9 @@
 
 {% block content %}
 
+   {% if notification %}
+       <div class="alert alert-info">{{ notification }}</div>
+   {% endif %}
     <!-- Start Page Title Area -->
     <div class="page-title">
         <div class="d-table">
