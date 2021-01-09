@@ -7,8 +7,13 @@
 /public/bundles/
 /var/
 /vendor/
+<<<<<<< HEAD
 /public/uploads
 /composer.phar
+=======
+/public/uploads/
+/.env
+>>>>>>> d81af95fdb6515f5634ab7f76482586c332f3473
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###
