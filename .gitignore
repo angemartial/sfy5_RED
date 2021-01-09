@@ -9,6 +9,7 @@
 /vendor/
 /public/uploads/
 /.env
+/.idea/workspace.xml
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###
