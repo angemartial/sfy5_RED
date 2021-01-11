@@ -13,7 +13,11 @@
 =======
 /public/uploads/
 /.env
+<<<<<<< HEAD
 >>>>>>> d81af95fdb6515f5634ab7f76482586c332f3473
+=======
+/.idea/workspace.xml
+>>>>>>> 70423ff5ae71d6e2a29c328c11cf8fb4d5fbdbd9
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###
