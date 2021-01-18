@@ -35,7 +35,7 @@
                         <div class="img">
                             <img src="/uploads/{{ article.illustration }}" alt="{{ article.title }}">
                             <div class="date">
-                                <span>15 Jan <br> 2018</span>
+                                <span>{{ article.publishedAt|date('d M Y') }}</span>
                             </div>
                         </div>
 
