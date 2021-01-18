@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page 404 - RED{% endblock %}
+
+{% block content %}
+    <div class="page-title">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <h3>Page introuvable</h3>
+                            <ul>
+                                <li><a href="{{ path ('homepage') }}">Accueil</a></li>
+                                <li>/</li>
+                                <li>Page d'erreur 404</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Title Area -->
+
+    <!-- Start Signup Area -->
+    <section class="signup-area ptb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="signup-content ">
+                        <h3 class="text-center">Page d'erreur 404 </h3>
+                        <h2 class="text-center">Page introuvable</h2>
+                        <p class="text-center">Désolé, cette page ne semble pas être accessible pour le moment.</p>
+                        <button class="btn btn-lg btn-primary text-center" type="submit">
+                            Page d'accueil
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

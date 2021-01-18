@@ -13,7 +13,7 @@
                         <div class="row">
                             <div class="col-lg-12 col-md-12 slide">
                                 <h3>{{ slider.category.name }}</h3>
-                                <h2><span>{{ slider.title|striptags|raw|u.truncate(22,'...', false)|raw }}</span></h2>
+                                <h2><span>{{ slider.title|striptags|raw|u.truncate(50,'...', false)|raw }}</span></h2>
                                 <p>{{ slider.introduction|striptags|u.truncate(255,'...', false)|raw }}</p>
                                 <a href="{{ path ('article_show', {'slug': slider.slug}) }}" class="btn btn-primary">Lire +</a>
                             </div>
@@ -103,7 +103,7 @@
     <section class="blog-area ptb-80">
         <div class="container">
             <div class="section-title">
-                <h2>N<span>ews</span></h2>
+                <h2>A<span>ctualités</span></h2>
             </div>
             <div class="row">
                 <div class="blog-slider">
@@ -177,69 +177,69 @@
     </section>
 
     <!-- Start Services Area -->
-    <section class="services-area ptb-80">
-        <div class="container">
-            <div class="section-title">
-                <h2>Base de <span>Données</span></h2>
-            </div>
-            <div class="row">
+    {#<section class="services-area ptb-80">#}
+        {#<div class="container">#}
+            {#<div class="section-title">#}
+                {#<h2>Base de <span>Données</span></h2>#}
+            {#</div>#}
+            {#<div class="row">#}
 
-{% for data in database%}
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="services-box">
-                        <div class="icon">
-                            <i class="fa fa-gavel"></i>
-                        </div>
-                        <div class="services-text">
-                            <h3><a href="{{ path ('article_show', {'slug': data.slug}) }}">{{ data.title }}</a></h3>
-                            <p>{{ data.introduction }}</p>
-                        </div>
-                    </div>
-                </div>
-{% endfor %}
+{#{% for data in database%}#}
+                {#<div class="col-lg-4 col-md-6 col-sm-6">#}
+                    {#<div class="services-box">#}
+                        {#<div class="icon">#}
+                            {#<i class="fa fa-gavel"></i>#}
+                        {#</div>#}
+                        {#<div class="services-text">#}
+                            {#<h3><a href="{{ path ('article_show', {'slug': data.slug}) }}">{{ data.title }}</a></h3>#}
+                            {#<p>{{ data.introduction }}</p>#}
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+{#{% endfor %}#}
 
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="browse-all-btn">
-                        <a href="{{ path ('methodology_index') }}" class="btn btn-primary">Tous voir</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Services Area Area -->
+                {#<div class="col-lg-12 col-md-12 col-sm-12">#}
+                    {#<div class="browse-all-btn">#}
+                        {#<a href="{{ path ('methodology_index') }}" class="btn btn-primary">Tous voir</a>#}
+                    {#</div>#}
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
+    {#</section>#}
+    {#<!-- End Services Area Area -->#}
 
-    <!-- Start Practice Area -->
-    <section class="practice-area ptb-80">
-        <div class="container">
-            <div class="section-title">
-                <h2><span>Répères </span> Méthologiques</h2>
-            </div>
-            <div class="row">
-                {% for method in method %}
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="practice-box">
-                        <div class="thumb">
-                            <img src="uploads/{{ method.illustration }}" alt="practice-img">
-                            <div class="practice-link">
-                                <a href="{{ path ('article_show',{'slug': method.slug}) }}"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="practice-text">
-                            <h3><a href="{{ path ('article_show',{'slug': method.slug}) }}">{{ method.title }}</a></h3>
-                            <p>{{ method.introduction }}</p>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
+    {#<!-- Start Practice Area -->#}
+    {#<section class="practice-area ptb-80">#}
+        {#<div class="container">#}
+            {#<div class="section-title">#}
+                {#<h2><span>Répères </span> Méthologiques</h2>#}
+            {#</div>#}
+            {#<div class="row">#}
+                {#{% for method in method %}#}
+                {#<div class="col-lg-4 col-md-6 col-sm-6">#}
+                    {#<div class="practice-box">#}
+                        {#<div class="thumb">#}
+                            {#<img src="uploads/{{ method.illustration }}" alt="practice-img">#}
+                            {#<div class="practice-link">#}
+                                {#<a href="{{ path ('article_show',{'slug': method.slug}) }}"><i class="fa fa-link"></i></a>#}
+                            {#</div>#}
+                        {#</div>#}
+                        {#<div class="practice-text">#}
+                            {#<h3><a href="{{ path ('article_show',{'slug': method.slug}) }}">{{ method.title }}</a></h3>#}
+                            {#<p>{{ method.introduction }}</p>#}
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+                {#{% endfor %}#}
 
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="browse-all-btn">
-                        <a href="{{ path ('methodology_index') }}" class="btn btn-primary">Tous voir</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                {#<div class="col-lg-12 col-md-12 col-sm-12">#}
+                    {#<div class="browse-all-btn">#}
+                        {#<a href="{{ path ('methodology_index') }}" class="btn btn-primary">Tous voir</a>#}
+                    {#</div>#}
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
+    {#</section>#}
     <!-- End Practice Area -->
 
 {% endblock %}

@@ -73,7 +73,7 @@ class User implements UserInterface
     private $slug;
 
     /**
-     * @ORM\OneToMany(targetEntity=Article::class, mappedBy="user")
+     * @ORM\OneToMany(targetEntity=Article::class, mappedBy="user",  cascade={"persist", "remove"})
      */
     private $articles;
 
