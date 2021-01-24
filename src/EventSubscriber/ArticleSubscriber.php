@@ -27,7 +27,7 @@ class ArticleSubscriber implements EventSubscriberInterface
     public static function getSubscribedEvents()
    {
        return [
-         BeforeEntityPersistedEvent::class => ['setUser']
+         //BeforeEntityPersistedEvent::class => ['setUser']
        ];
    }
 
