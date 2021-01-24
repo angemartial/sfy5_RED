@@ -2,13 +2,17 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="RED_database" uuid="bffc4683-4339-4718-a41d-9e8ac82d52cc">
-      <database-info product="MySQL" version="5.5.5-10.4.14-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.47 ( Revision: fe1903b1ecb4a96a917f7ed3190d80c049b1de29 )">
+      <database-info product="MySQL" version="5.5.5-10.4.14-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.47 ( Revision: fe1903b1ecb4a96a917f7ed3190d80c049b1de29 )" dbms="MARIADB" exact-version="10.4.14">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
       <user-name>root</user-name>
-      <introspection-schemas>*:db_sfy5</introspection-schemas>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="db_sfy5" />
+        </introspection-scope>
+      </schema-mapping>
     </data-source>
   </component>
 </project>

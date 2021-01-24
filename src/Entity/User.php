@@ -56,6 +56,11 @@ class User implements UserInterface
     private $firstname;
 
     /**
+     * @var string
+     */
+    private $plainPassword;
+
+    /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank(message ="renseignez votre nom")
      */
@@ -92,7 +97,23 @@ class User implements UserInterface
         return $this->getFirstname() . ' ' . $this->getLastname();
     }
 
-    
+    /**
+     * @return string
+     */
+    public function getPlainPassword(): ?string
+    {
+        return $this->plainPassword;
+    }
+
+    /**
+     * @param string $plainPassword
+     * @return User
+     */
+    public function setPlainPassword(string $plainPassword): User
+    {
+        $this->plainPassword = $plainPassword;
+        return $this;
+    }
 
     public function getId(): ?int
     {

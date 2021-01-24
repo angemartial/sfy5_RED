@@ -43,7 +43,7 @@ class ArticleCrudController extends AbstractCrudController
        return [
            TextField::new('title'),
            SlugField::new('slug')->setTargetFieldName('title'),
-           AssociationField::new('user','Auteur')->hideOnForm(),
+           AssociationField::new('user','Auteur'),
            TextareaField::new('introduction', 'Introduction')->setFormType(CKEditorType::class),
            TextareaField::new('content', 'Corps de l\'article')->setFormType(CKEditorType::class),
            //TextEditorField::new('introduction','Introduction')->setFormType(CKEditorType::class),
@@ -57,6 +57,14 @@ class ArticleCrudController extends AbstractCrudController
                ->setUploadedFileNamePattern('[randomhash].[extension]')
                ->setRequired(false),
        ];
+    }
+
+    public function createEntity(string $entityFqcn)
+    {
+        /** @var Article $article */
+        $article =  parent::createEntity($entityFqcn);
+        $article->setUser($this->getUser());
+        return $article;
     }
 
 }
