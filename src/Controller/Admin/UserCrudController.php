@@ -9,6 +9,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\ArrayField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\EmailField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class UserCrudController extends AbstractCrudController
@@ -38,7 +39,7 @@ class UserCrudController extends AbstractCrudController
             TextField::new('description'),
             TextField::new('firstname', 'Prénoms'),
             TextField::new('lastname', 'Nom'),
-            TextField::new('plainPassword', 'Mot de passe')->onlyOnForms()
+            TextField::new('plainPassword', 'Mot de passe')->onlyOnForms()->setFormType(PasswordType::class)
         ];
     }
 
@@ -57,7 +58,6 @@ class UserCrudController extends AbstractCrudController
 
     public function updatePassword(User $user)
     {
-        dd($user->getPlainPassword());
         if (!empty($user->getPlainPassword())) {
             $user->setPassword($this->passwordEncoder->encodePassword($user, $user->getPlainPassword()));
         }
