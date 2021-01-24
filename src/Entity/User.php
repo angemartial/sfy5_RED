@@ -273,7 +273,7 @@ class User implements UserInterface
 
     public function __toString()
     {
-        return $this->lastname;
+        return $this->firstname . ' ' . $this->lastname;
     }
 
     /**
