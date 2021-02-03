@@ -1970,13 +1970,14 @@ Side Bar Area CSS
 }
 .side-bar-box form button {
 	position: absolute;
-	right: 0;
-	top: 0;
-	height: 45px;
+	right: 1px;
+	top: 1px;
+	height: 43px;
 	width: 55px;
 	border: none;
 	background: #fff;
 	cursor: pointer;
+	outline: none;
     -ms-transition: .4s;
 	-o-transition: .4s;
 	-webkit-transition: .4s;
@@ -2072,7 +2073,7 @@ Side Bar Area CSS
 	margin-top: 7px;
 }
 .side-bar-box .recent-post-content a {
-	font-size: 13px;
+	font-size: .7rem;
 	line-height: 1.5;
 }
 .side-bar-box .recent-post-content h3 a {
