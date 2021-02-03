@@ -11,6 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class ResetPasswordController extends AbstractController
@@ -46,7 +47,9 @@ class ResetPasswordController extends AbstractController
 
                 $url = $this->generateUrl('update_password', [
                     'token' => $reset_password->getToken()
-                ]);
+                ],
+                UrlGeneratorInterface::ABSOLUTE_URL
+                );
 
 
                 $content = 'Bonjour ' .$user->getFirstname(). "<br/></br> Vous avez demandé à réinitialiser votre mot de passe sur le site Recherche Edification et Développement<br/><br/>";
