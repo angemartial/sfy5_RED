@@ -35,7 +35,7 @@ class UserCrudController extends AbstractCrudController
     {
         return [
             EmailField::new('email'),
-            ChoiceField::new('userType', 'type d\'utilisateur')->setChoices([  'utilisateur simple' => 'user',  'Administrateur' => 'admin',  'Super administrateur'  => 'super_admin']),
+            ChoiceField::new('userType', 'type d\'utilisateur')->setChoices([  'Utilisateur simple' => 'user',  'Administrateur' => 'admin',  'Super administrateur'  => 'super_admin']),
             TextField::new('description'),
             TextField::new('firstname', 'Prénoms'),
             TextField::new('lastname', 'Nom'),

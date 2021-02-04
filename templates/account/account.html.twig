@@ -3,7 +3,12 @@
 {% block title %}Mon compte - RED{% endblock %}
 
 {% block stylesheet %}
-
+{{ parent() }}
+    <style>
+        .form-enable:not(.active){
+            display: none !important;
+        }
+    </style>
 {% endblock %}
 
 {% block content %}
@@ -50,51 +55,59 @@
 
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="contact-form">
-                        <form id="contactForm">
+                        {{ form_start(form) }}
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="form-group">
-                                        <lable for="cname">Nom</lable>
-                                        <input type="text" class="form-control" value="{{ app.user.firstname }}" disabled>
-                                        <div class="help-block with-errors"></div>
+                                        {{ form_label(form.firstname) }}
+                                        <input type="text" class="form-control form-disable" value="{{ app.user.firstname }}" disabled>
+                                        {{ form_widget(form.firstname) }}
+                                        <div class="help-block with-errors">{{ form_errors(form.firstname) }}</div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="form-group">
-                                        <lable for="cname">Prénoms</lable>
-                                        <input type="text" class="form-control" value="{{ app.user.lastname }}" disabled>
-                                        <div class="help-block with-errors"></div>
+                                        {{ form_label(form.lastname) }}
+                                        <input type="text" class="form-control form-disable" value="{{ app.user.lastname }}" disabled>
+                                        {{ form_widget(form.lastname) }}
+                                        <div class="help-block with-errors">{{ form_errors(form.lastname) }}</div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="form-group">
-                                        <lable for="cname">Email</lable>
-                                        <input type="text" class="form-control" value="{{ app.user.email }}" disabled>
-                                        <div class="help-block with-errors"></div>
+                                        {{ form_label(form.email) }}
+                                        <input type="text" class="form-control form-disable" value="{{ app.user.email }}" disabled>
+                                        {{ form_widget(form.email) }}
+                                        <div class="help-block with-errors">{{ form_errors(form.email) }}</div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="form-group">
-                                        <lable for="cname">Description</lable>
-                                        <textarea name="message" class="form-control" value="{{ app.user.description }}" disabled></textarea>
-                                        <div class="help-block with-errors"></div>
+                                        {{ form_label(form.description) }}
+                                        <textarea name="message" class="form-control form-disable" disabled>{{ app.user.description }}</textarea>
+                                        {{ form_widget(form.description) }}
+                                        <div class="help-block with-errors">{{ form_errors(form.description) }}</div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-12 col-md-12 col-sm-12">
-                                    <div class="mt-3">
-                                        <a href="#" class="btn btn-primary mr-2 mb-2" disabled="disabled">
+                                    <div class="mt-3 form-disable">
+                                        <a id="update-data" href="#" class="btn btn-primary mr-2 mb-2" disabled="disabled">
                                             modifier vos informations
                                         </a>
                                         <a href="{{ path('account_password') }}" class="btn btn-primary mr-2 mb-2">
                                             changer de mot de passe
                                         </a>
                                     </div>
+                                    <div class="mt-3 form-enable">
+                                        <button type="submit" class="btn-primary btn mr-2 mb-2">Enregistrer</button>
+                                        <button id="cancel-update-data" class="btn-warning  btn mr-2 mb-2">Annuler</button>
+                                    </div>
                                 </div>
                             </div>
-                        </form>
+                        {{ form_end(form) }}
                     </div>
                 </div>
             </div>
@@ -105,5 +118,19 @@
 {% endblock %}
 
 {% block javascript %}
-
+{{ parent() }}
+<script type="text/javascript">
+$(function (){
+    $('#update-data').on('click', function (e){
+        e.preventDefault();
+        $('.form-enable').addClass('active');
+        $('.form-disable').hide();
+    });
+    $('#cancel-update-data').on('click', function (e){
+        e.preventDefault();
+        $('.form-enable').removeClass('active');
+        $('.form-disable').show();
+    });
+})
+</script>
 {% endblock %}
