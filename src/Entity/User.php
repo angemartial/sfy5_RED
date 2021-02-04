@@ -87,6 +87,7 @@ class User implements UserInterface
      */
     private $userType = 'user';
 
+
     public function __construct()
     {
         $this->articles = new ArrayCollection();
@@ -307,7 +308,9 @@ class User implements UserInterface
     public function setUserType(string $userType): void
     {
         $this->userType = $userType;
+        $this->updateRole();
     }
+
 
 
 }
