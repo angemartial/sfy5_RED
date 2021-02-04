@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e38c0d2-f9fd-4839-a9e8-2ffb5ba97d38" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sfy5_RED.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sfy5_RED.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AccountController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/account.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/account.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/category.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/category.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/partials/_blogWidget.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_blogWidget.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -712,7 +703,7 @@
       <workItem from="1610997888026" duration="588000" />
       <workItem from="1611518981868" duration="4879000" />
       <workItem from="1612313565494" duration="8802000" />
-      <workItem from="1612419179204" duration="5239000" />
+      <workItem from="1612419179204" duration="9061000" />
     </task>
     <servers />
   </component>
