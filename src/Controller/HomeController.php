@@ -47,14 +47,20 @@ class HomeController extends AbstractController
     /**
      * @Route("/categorie/{slug}", name="home.category_page")
      */
-    public function category($slug, CategoryRepository $repository, ArticleRepository $articleRepository){
+    public function category($slug, CategoryRepository $repository, ArticleRepository $articleRepository, Request $request){
         $slug = trim(strip_tags($slug));
         $category = $repository->findOneBy(['name' => $slug]);
         if (null === $category) {
             throw $this->createNotFoundException('Cette catégorie n\'existe pas dans notre systeme');
         }
+        $page = $request->query->get('page', 1);
+        $limit = 20;
+        $offset = ($page - 1) * $limit;
+        $total = $articleRepository->findPublishedBy(['category' => $category], ["id" => "Desc"])->count();
+        $pages = ceil( $total / $limit);
 
-        $articles = $articleRepository->findPublishedBy(['category' => $category], ["id" => "Desc"], 20, 0);
+        $articles = $articleRepository->findPublishedBy(['category' => $category], ["id" => "Desc"], $limit, $offset)->toArray();
+
         $subCategories = $category->getSubCategories();
 
         $subCategoryContent = [];
@@ -62,14 +68,16 @@ class HomeController extends AbstractController
         foreach ($subCategories as $subCategory) {
             $subCategoryContent[] = [
                 'subCategory' => $subCategory,
-                'articles' => $articleRepository->findPublishedBy(['category' => $subCategory], ["id" => "Desc"], 10, 0)
+                'articles' => $articleRepository->findPublishedBy(['category' => $subCategory], ["id" => "Desc"], 10, 0),
+
             ];
         }
 
         return $this->render('home/category.html.twig', [
                 'subCategoryContent' => $subCategoryContent,
                 'category' => $category,
-                'articles' => $articles
+                'articles' => $articles,
+                'pages' => $pages,
             ]
         );
 

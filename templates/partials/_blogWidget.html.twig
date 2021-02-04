@@ -12,9 +12,9 @@
             <ul>
                 {% for category in categoryList %}
                     {% if category.parent is empty %}
-                        <li><a href="{{ path('home.category_page', {slug: category.slug}) }}"><i class="fa fa-angle-double-right"></i> {{ category.name }} ({{ category.articles|length }})</a></li>
+                        <li><a href="{{ path('home.category_page', {slug: category.name}) }}"><i class="fa fa-angle-double-right"></i> {{ category.name }} ({{ category.articles|length }})</a></li>
                         {% for subCategory in category.subCategories %}
-                            <li>&nbsp;&nbsp;&nbsp;<a href="{{ path('home.category_page', {slug: category.slug}) }}"><i class="fa fa-angle-double-right"></i> {{ subCategory.name }} ({{ subCategory.articles|length }})</a></li>
+                            <li>&nbsp;&nbsp;&nbsp;<a href="{{ path('home.category_page', {slug: category.name}) }}"><i class="fa fa-angle-double-right"></i> {{ subCategory.name }} ({{ subCategory.articles|length }})</a></li>
                         {% endfor %}
                     {% endif %}
                 {% endfor %}
