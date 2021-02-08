@@ -50,7 +50,7 @@ class RegisterController extends AbstractController
                 $mail = new Mail();
                 $mail->send($user->getEmail(), $user->getFirstname(),'Bienvenue sur le site de RED', $content );
                 $notification = "Votre inscription s'est déroulée avec succès !";
-                return $this->redirectToRoute('register');
+                return $this->redirectToRoute('account');
             }else{
                 $notification = "L'email que vous avez renseigné existe déjà !";
             }

@@ -5,5 +5,5 @@ ckfinder:
         defaultResourceTypes: 'Files,Images'
         resourceTypes:
             Files:
-                name: Files
+                name: files
                 backend: default

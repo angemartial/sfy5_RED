@@ -1,33 +1,82 @@
 <div class="col-lg-4 col-md-5 col-sm-5">
     <div class="side-bar mb-0">
         <div class="side-bar-box search-box">
-            {%  set categoryList = categoryRepository.findAll() %}
-            <h3 class="title">Catégories</h3>
             <form action="{{ path('home.search_result') }}" method="get" _lpchecked="1">
-                <div>
-                    <div class="form-group">
-                        <input type="text" id="string" name="string" placeholder="Votre recherche ..." class="form-control-sm form-control">
-                    </div>
-                    <fieldset class="form-group">
-                        <div id="categories">
-                            {% for category in categoryList  %}
-                                {% if category.parent is empty %}
-                                    <div class="form-check">
-                                        <input type="checkbox" id="categories_1" name="categories[]" class="form-check-input" value="1">
-                                        <label class="form-check-label" for="categories_1">{{ category.name }}</label>
-                                    </div>
-                                    {% for subCategory in category.subCategories %}
-                                        <div class="form-check">
-                                            &nbsp;<input type="checkbox" id="categories_1" name="categories[]" class="form-check-input" value="1">
-                                            <label class="form-check-label" for="categories_1">{{ subCategory.name }}</label>
-                                        </div>
-                                    {% endfor %}
-                                {% endif %}
-                            {% endfor %}
-                    </fieldset>
-                </div>
+                <input type="text" id="string" name="string" placeholder="Votre recherche ..." class="form-control-sm form-control">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
+        </div>
+        {%  set categoryList = categoryRepository.findAll() %}
+        <div class="side-bar-box categories-box">
+            <h3 class="title">Categories</h3>
+            <ul>
+                {% for category in categoryList %}
+                    {% if category.parent is empty %}
+                        <li><a href="{{ path('home.category_page', {slug: category.name}) }}"><i class="fa fa-angle-double-right"></i> {{ category.name }} ({{ category.articles|length }})</a></li>
+                        {% for subCategory in category.subCategories %}
+                            <li>&nbsp;&nbsp;&nbsp;<a href="{{ path('home.category_page', {slug: category.name}) }}"><i class="fa fa-angle-double-right"></i> {{ subCategory.name }} ({{ subCategory.articles|length }})</a></li>
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+{#        <div class="side-bar-box search-box">#}
+
+{#            <h3 class="title">Catégories</h3>#}
+{#            <form action="{{ path('home.search_result') }}" method="get" _lpchecked="1">#}
+{#                <div>#}
+{#                    <div class="form-group">#}
+{#                        <input type="text" id="string" name="string" placeholder="Votre recherche ..." class="form-control-sm form-control">#}
+{#                    </div>#}
+{#                    <fieldset class="form-group">#}
+{#                        <div id="categories">#}
+{#                            {% for category in categoryList  %}#}
+{#                                {% if category.parent is empty %}#}
+{#                                    <div class="form-check">#}
+{#                                        <input type="checkbox" id="categories_1" name="categories[]" class="form-check-input" value="1">#}
+{#                                        <label class="form-check-label" for="categories_1">{{ category.name }}</label>#}
+{#                                    </div>#}
+{#                                    {% for subCategory in category.subCategories %}#}
+{#                                        <div class="form-check">#}
+{#                                            &nbsp;<input type="checkbox" id="categories_1" name="categories[]" class="form-check-input" value="1">#}
+{#                                            <label class="form-check-label" for="categories_1">{{ subCategory.name }}</label>#}
+{#                                        </div>#}
+{#                                    {% endfor %}#}
+{#                                {% endif %}#}
+{#                            {% endfor %}#}
+{#                    </fieldset>#}
+{#                </div>#}
+{#                <button type="submit"><i class="fa fa-search"></i></button>#}
+{#            </form>#}
+{#        </div>#}
+        {%  set tags = tagRepository.findAll() %}
+        <div class="side-bar-box tags-box">
+            <h3 class="title">Mots clés</h3>
+            <ul>
+                {% for tag in tags %}
+                <li><a href="{{ path('home.search_result', {string: tag.name}) }}">{{ tag.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% set latestStories = articleRepository.findPublishedBy({}, {id: 'DESC'}, 3, 0) %}
+
+        <div class="side-bar-box recent-post mb-0">
+            <h3 class="title">Articles récents</h3>
+            {% for story in latestStories %}
+                <div class="single-recent-post">
+                    <div class="recent-post-img">
+                        <a href="{{ path('article_show', {slug: story.slug} ) }}"> <img src="/uploads/{{ story.illustration }}" alt="{{ story.title }}"></a>
+                    </div>
+                    <div class="recent-post-content">
+                        <ul>
+                            <li><a href="#">Par: {{ story.user.firstName|title }} &nbsp;&nbsp; <i class="fa fa-calendar"></i> {{ story.publishedAt|date('d M Y') }}</a></li>
+                        </ul>
+                        <h3><a href="{{ path('article_show', {slug: story.slug} ) }}">{{ story.title }}</a></h3>
+                    </div>
+                </div>
+            {% endfor %}
+
+
         </div>
 
         {#<div class="side-bar-box categories-box">#}

@@ -56,6 +56,11 @@ class User implements UserInterface
     private $firstname;
 
     /**
+     * @var string
+     */
+    private $plainPassword;
+
+    /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank(message ="renseignez votre nom")
      */
@@ -63,7 +68,7 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="text", nullable=true)
-     * @Assert\Length(min=100, minMessage="votre description doit faire au moins 100 caractères")
+     *
      */
     private $description;
 
@@ -82,6 +87,7 @@ class User implements UserInterface
      */
     private $userType = 'user';
 
+
     public function __construct()
     {
         $this->articles = new ArrayCollection();
@@ -92,7 +98,23 @@ class User implements UserInterface
         return $this->getFirstname() . ' ' . $this->getLastname();
     }
 
-    
+    /**
+     * @return string
+     */
+    public function getPlainPassword(): ?string
+    {
+        return $this->plainPassword;
+    }
+
+    /**
+     * @param string $plainPassword
+     * @return User
+     */
+    public function setPlainPassword(string $plainPassword): User
+    {
+        $this->plainPassword = $plainPassword;
+        return $this;
+    }
 
     public function getId(): ?int
     {
@@ -252,7 +274,7 @@ class User implements UserInterface
 
     public function __toString()
     {
-        return $this->lastname;
+        return $this->firstname . ' ' . $this->lastname;
     }
 
     /**
@@ -286,7 +308,9 @@ class User implements UserInterface
     public function setUserType(string $userType): void
     {
         $this->userType = $userType;
+        $this->updateRole();
     }
+
 
 
 }
