@@ -20,38 +20,45 @@ class RegisterType extends AbstractType
         $builder
             ->add('firstname',
                 TextType::class, [
-                    'label' => 'Votre prénom',
+                    'label' => false,
                     'attr' => [
-                        'placeholder' => 'Entrez votre prenom'
+                        'placeholder' => 'Entrez votre Prénom'
                     ]
                 ])
             ->add('lastname',
                 TextType::class, [
-                    'label' => 'Votre Nom',
+                    'label' => false,
                     'attr' => [
-                        'placeholder' => 'Entrez votre nom'
+                        'placeholder' => 'Entrez votre Nom'
                     ]
                 ])
             ->add('email',
                 EmailType::class, [
-                    'label' => 'Votre email',
+                    'label' => false,
                     'attr' => [
-                        'placeholder' => 'Entrez votre email'
+                        'placeholder' => 'Entrez votre Email'
                     ]
                 ])
             ->add('password',
                 RepeatedType::class, [
                     'type' => PasswordType::class,
                     'invalid_message' => 'Mot de passe non identique',
-                    'label' => 'Mot de passe',
+                    'label' => false,
                     'required' => true,
-                    'first_options' => ['label' => 'Mot de passe'],
-                    'second_options' => ['label' => 'Confirmez mot de passe']
+                    'first_options' => ['label' => false,
+                        'attr' => [
+                            'placeholder' => 'Tapez votre mot de passe'
+                        ]
+                        ],
+                    'second_options' => ['label' => false,
+                        'attr' => [
+                            'placeholder' => 'Confirmez votre mot de passe'
+                        ]]
                 ])
 
             ->add('description',
                 TextareaType::class,[
-                    'label' => 'Description',
+                    'label' => false,
                     'attr' => [
                         'placeholder' => 'Parlez nous un peu de vous'
                     ]

@@ -47,18 +47,19 @@ class ArticleCrudController extends AbstractCrudController
            TextField::new('title'),
            SlugField::new('slug')->setTargetFieldName('title'),
            AssociationField::new('user','Auteur'),
-           TextareaField::new('introduction', 'Introduction')->setFormType(CKEditorType::class),
+           TextEditorField::new('introduction', 'Introduction'),
            TextareaField::new('content', 'Corps de l\'article')->setFormType(CKEditorType::class),
            //TextEditorField::new('introduction','Introduction')->setFormType(CKEditorType::class),
            //TextEditorField::new('content'),
-           AssociationField::new('category'),
+           AssociationField::new('category')->setRequired(true),
 
-           DateTimeField::new('publishedAt', 'Publier le'),
+           //DateTimeField::new('publishedAt', 'Publier le'),
            ImageField::new('illustration')
                ->setBasePath('/uploads')
                ->setUploadDir(\DIRECTORY_SEPARATOR . 'public/uploads')
                ->setUploadedFileNamePattern('[randomhash].[extension]')
                ->setRequired(false),
+
        ];
     }
 
