@@ -5,39 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e38c0d2-f9fd-4839-a9e8-2ffb5ba97d38" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EventSubscriber/CategoryRemoveSubscriber.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Form/AccountType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.env" afterPath="$PROJECT_DIR$/.env" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sfy5_RED.iml" afterPath="$PROJECT_DIR$/.idea/sfy5_RED.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/bundles.php" afterPath="$PROJECT_DIR$/config/bundles.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/ckfinder.yaml" afterPath="$PROJECT_DIR$/config/packages/ckfinder.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/fos_ckeditor.yaml" afterPath="$PROJECT_DIR$/config/packages/fos_ckeditor.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/twig.yaml" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/style.css" afterPath="$PROJECT_DIR$/public/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/AccountController.php" afterPath="$PROJECT_DIR$/src/Controller/AccountController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/Admin/ArticleCrudController.php" afterPath="$PROJECT_DIR$/src/Controller/Admin/ArticleCrudController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" afterPath="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/RegisterController.php" afterPath="$PROJECT_DIR$/src/Controller/RegisterController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/ResetPasswordController.php" afterPath="$PROJECT_DIR$/src/Controller/ResetPasswordController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Article.php" afterPath="$PROJECT_DIR$/src/Entity/Article.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/User.php" afterPath="$PROJECT_DIR$/src/Entity/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EventSubscriber/ArticleSubscriber.php" afterPath="$PROJECT_DIR$/src/EventSubscriber/ArticleSubscriber.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Form/RegisterType.php" afterPath="$PROJECT_DIR$/src/Form/RegisterType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/account/account.html.twig" afterPath="$PROJECT_DIR$/templates/account/account.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/home/category.html.twig" afterPath="$PROJECT_DIR$/templates/home/category.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/home/home.html.twig" afterPath="$PROJECT_DIR$/templates/home/home.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/members/infomember.html.twig" afterPath="$PROJECT_DIR$/templates/members/infomember.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/partials/_blogWidget.html.twig" afterPath="$PROJECT_DIR$/templates/partials/_blogWidget.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/partials/_footer.html.twig" afterPath="$PROJECT_DIR$/templates/partials/_footer.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/register/register.html.twig" afterPath="$PROJECT_DIR$/templates/register/register.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/security/login.html.twig" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/aws/aws-sdk-php/" />
     <ignored path="$PROJECT_DIR$/vendor/ckfinder/ckfinder-symfony-bundle/" />
@@ -245,7 +213,7 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
+            <state relative-caret-position="1173">
               <caret line="76" column="7" lean-forward="false" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
               <folding />
             </state>
@@ -272,20 +240,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegisterController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/RegisterController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="53" column="18" lean-forward="false" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="register.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/register/register.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
+            <state relative-caret-position="714">
               <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
@@ -295,7 +253,7 @@
       <file leaf-file-name="RegisterType.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Form/RegisterType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="289">
               <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
               <folding />
             </state>
@@ -305,18 +263,18 @@
       <file leaf-file-name="login.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/security/login.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
+            <state relative-caret-position="374">
               <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fos_ckeditor.yaml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="fos_ckeditor.yaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/packages/fos_ckeditor.yaml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -325,8 +283,18 @@
       <file leaf-file-name="DashboardController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/Admin/DashboardController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
+            <state relative-caret-position="595">
               <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserCrudController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="46" column="50" lean-forward="false" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -370,7 +338,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/account/password.html.twig" />
         <option value="$PROJECT_DIR$/src/Form/ContactType.php" />
         <option value="$PROJECT_DIR$/src/Entity/Contact.php" />
         <option value="$PROJECT_DIR$/src/Controller/ContactController.php" />
@@ -421,6 +388,7 @@
         <option value="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" />
         <option value="$PROJECT_DIR$/config/packages/ckfinder.yaml" />
         <option value="$PROJECT_DIR$/config/packages/fos_ckeditor.yaml" />
+        <option value="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" />
       </list>
     </option>
   </component>
@@ -558,7 +526,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="width" value="1376" />
     <option name="height" value="754" />
   </component>
   <component name="ProjectId" id="1mG5my58bC8SMREjkdOuvYp0vmK" />
@@ -660,254 +628,10 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sfy5_RED" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sfy5_RED" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sfy5_RED" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sfy5_RED" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fosckeditor" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sfy5_RED" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sfy5_RED" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fosckeditor" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sfy5_RED" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sfy5_RED" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fosckeditor" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clipboard" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dialogs" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sfy5_RED" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sfy5_RED" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fosckeditor" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CKEditorFootnotes-1.0.10" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sfy5_RED" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sfy5_RED" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fosckeditor" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CKEditorFootnotes-1.0.10" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="footnotes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sfy5_RED" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sfy5_RED" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fosckeditor" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="a11yhelp" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dialogs" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sfy5_RED" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sfy5_RED" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sfy5_RED" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sfy5_RED" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sfy5_RED" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sfy5_RED" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="packages" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -920,7 +644,7 @@
     <property name="SearchEverywhereHistoryKey" value="register&#9;FILE&#9;file://G:/Analyste programmeur/sf5_red/sfy5_RED/templates/register/register.html.twig&#10;FileUploadType&#9;null&#9;null&#10;author&#9;null&#9;null&#10;FileUploadType.php&#9;FILE&#9;file://G:/Analyste programmeur/sf5_red/sfy5_RED/vendor/easycorp/easyadmin-bundle/src/Form/Type/FileUploadType.php&#10;security&#9;FILE&#9;file://G:/Analyste programmeur/sf5_red/sfy5_RED/config/packages/security.yaml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../LeMandat2021/_" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -1057,18 +781,19 @@
       <workItem from="1612198590738" duration="1797000" />
       <workItem from="1612291667720" duration="635000" />
       <workItem from="1612294208591" duration="920000" />
-      <workItem from="1612804603695" duration="6572000" />
+      <workItem from="1612804603695" duration="8220000" />
+      <workItem from="1613412923655" duration="105000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191053000" />
+    <option name="totallyTimeSpent" value="192806000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1376" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18305598" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18541034" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18920973" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1148,14 +873,14 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/86cef5a0/bffc4683-4339-4718-a41d-9e8ac82d52cc/db_sfy5.user">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1306,13 +1031,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-32">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/ResetPassword.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-612">
@@ -1345,7 +1063,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="42" column="14" lean-forward="false" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1353,7 +1070,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1361,7 +1077,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2295">
           <caret line="135" column="62" lean-forward="false" selection-start-line="135" selection-start-column="62" selection-end-line="135" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1369,10 +1084,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1156">
           <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding>
-            <marker date="1612804769341" expanded="true" signature="4289:4353" ph="{...}" />
-            <marker date="1612804769341" expanded="true" signature="4391:4432" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1380,7 +1091,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
           <caret line="55" column="13" lean-forward="false" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1388,7 +1098,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-877">
           <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1396,7 +1105,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="73" lean-forward="false" selection-start-line="11" selection-start-column="73" selection-end-line="11" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1404,7 +1112,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="412">
           <caret line="87" column="31" lean-forward="true" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1412,7 +1119,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="37" column="48" lean-forward="false" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1420,7 +1126,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="113" column="3" lean-forward="false" selection-start-line="113" selection-start-column="3" selection-end-line="178" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1428,7 +1133,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="389">
           <caret line="92" column="39" lean-forward="false" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1436,7 +1140,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1444,13 +1147,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
           <caret line="53" column="18" lean-forward="false" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
+        <state relative-caret-position="1173">
           <caret line="76" column="7" lean-forward="false" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
           <folding />
         </state>
@@ -1474,7 +1176,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Form/RegisterType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="289">
           <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
           <folding />
         </state>
@@ -1482,7 +1184,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/register/register.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
+        <state relative-caret-position="714">
           <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
@@ -1490,16 +1192,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/security/login.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
+        <state relative-caret-position="374">
           <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Admin/DashboardController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1515,7 +1209,23 @@
     <entry file="file://$PROJECT_DIR$/config/packages/fos_ckeditor.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Admin/DashboardController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="46" column="50" lean-forward="false" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
           <folding />
         </state>
       </provider>
