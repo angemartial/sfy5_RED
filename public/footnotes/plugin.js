@@ -191,7 +191,7 @@
             var $footnotes = $contents.find('.footnotes');
 
             if ($footnotes.length == 0) {
-                var header_title = editor.config.footnotesTitle ? editor.config.footnotesTitle : 'Note de bas de page';
+                var header_title = editor.config.footnotesTitle ? editor.config.footnotesTitle : 'Références';
                 var header_els = ['<h2>', '</h2>'];//editor.config.editor.config.footnotesHeaderEls
                 if (editor.config.footnotesHeaderEls) {
                     header_els = editor.config.footnotesHeaderEls;
