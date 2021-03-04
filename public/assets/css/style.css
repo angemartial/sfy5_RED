@@ -606,6 +606,41 @@ Search Popup Area CSS
 Main Banner Area CSS
 =========================================
 */
+/*note de bas de page */
+sup {
+	/* top: -.5em; */
+	display: inline-block;
+	position: initial;
+	font-size: inherit;
+	vertical-align: super;
+	margin-right: .25rem;
+}
+sup a {
+	color: #0056b3;
+	scroll-margin-top: 90px;
+}
+section.footnotes {
+	margin: 2rem 0;
+	padding: 1rem;
+	background-color: rgba(228,53,58,0.1);
+}
+section.footnotes h2 {
+	font-weight: 600;
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+}
+section.footnotes ol li {
+	list-style: inherit;
+	margin-left: 1rem;
+}
+section.footnotes li sup {
+	font-family: sans-serif;
+	font-weight: 600;
+}
+section.footnotes li sup a {
+	font-size: 1rem;
+}
+
 .main-banner {
 	height: 550px;
 	background: #ddd;
