@@ -48,7 +48,8 @@ class ArticleCrudController extends AbstractCrudController
            SlugField::new('slug')->setTargetFieldName('title'),
            AssociationField::new('user','Auteur'),
            TextEditorField::new('introduction', 'Introduction'),
-           TextareaField::new('content', 'Corps de l\'article')->setFormType(CKEditorType::class),
+           TextareaField::new('content', 'Corps de l\'article')->setFormType(CKEditorType::class)
+               ->setRequired(true),
            //TextEditorField::new('introduction','Introduction')->setFormType(CKEditorType::class),
            //TextEditorField::new('content'),
            AssociationField::new('category')->setRequired(true),
