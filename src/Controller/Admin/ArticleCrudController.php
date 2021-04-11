@@ -30,38 +30,38 @@ class ArticleCrudController extends AbstractCrudController
     public function configureAssets(Assets $assets): Assets
     {
         return $assets->addJsFile('/bundles/cksourceckfinder/ckfinder/ckfinder.js')
-                      ->addJsFile('/assets/js/ckfinder-setup.js');
+            ->addJsFile('/assets/js/ckfinder-setup.js');
     }
 
     public function configureCrud(Crud $crud): Crud
     {
         return $crud->setDefaultSort(['id' => 'DESC'])
-        ->addFormTheme('@FOSCKEditor/Form/ckeditor_widget.html.twig');
+            ->addFormTheme('@FOSCKEditor/Form/ckeditor_widget.html.twig');
     }
 
 
     public function configureFields(string $pageName): iterable
     {
-    
-       return [
-           TextField::new('title'),
-           SlugField::new('slug')->setTargetFieldName('title'),
-           AssociationField::new('user','Auteur'),
-           TextEditorField::new('introduction', 'Introduction'),
-           TextareaField::new('content', 'Corps de l\'article')->setFormType(CKEditorType::class)
-               ->setRequired(true),
-           //TextEditorField::new('introduction','Introduction')->setFormType(CKEditorType::class),
-           //TextEditorField::new('content'),
-           AssociationField::new('category')->setRequired(true),
 
-           //DateTimeField::new('publishedAt', 'Publier le'),
-           ImageField::new('illustration')
-               ->setBasePath('/uploads')
-               ->setUploadDir(\DIRECTORY_SEPARATOR . 'public/uploads')
-               ->setUploadedFileNamePattern('[randomhash].[extension]')
-               ->setRequired(false),
+        return [
+            TextField::new('title'),
+            SlugField::new('slug')->setTargetFieldName('title'),
+            AssociationField::new('user', 'Auteur'),
+            TextEditorField::new('introduction', 'Introduction'),
+            TextareaField::new('content', 'Corps de l\'article')->setFormType(CKEditorType::class)
+                ->setRequired(false),
+            //TextEditorField::new('introduction','Introduction')->setFormType(CKEditorType::class),
+            //TextEditorField::new('content'),
+            AssociationField::new('category')->setRequired(true),
 
-       ];
+            //DateTimeField::new('publishedAt', 'Publier le'),
+            ImageField::new('illustration')
+                ->setBasePath('/uploads')
+                ->setUploadDir(\DIRECTORY_SEPARATOR . 'public/uploads')
+                ->setUploadedFileNamePattern('[randomhash].[extension]')
+                ->setRequired(false),
+
+        ];
     }
 
     public function createEntity(string $entityFqcn)
@@ -91,9 +91,6 @@ class ArticleCrudController extends AbstractCrudController
             ->add(Crud::PAGE_INDEX, $shareOnTwitter)
             ->add(Crud::PAGE_EDIT, $shareOnTwitter)
             ->add(Crud::PAGE_INDEX, $shareOnFacebook)
-            ->add(Crud::PAGE_EDIT, $shareOnFacebook)
-            ;
+            ->add(Crud::PAGE_EDIT, $shareOnFacebook);
     }
-
-
 }
